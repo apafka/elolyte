@@ -26,8 +26,8 @@ Page shape (steal the *habit* from daily-nutrition brands, not the gummy): subsc
 Buy buttons read two constants at the top of `index.html`:
 
 ```js
-const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";         // $45 one-time
-const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription"; // $39 / month
+const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/00w5kD0QQ8vf5tu78K6kg01";            // $45 one-time — live
+const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription"; // $39 / month — still a placeholder
 ```
 
 Do **not** put Stripe secret keys on this site. Payment Links are public URLs.
