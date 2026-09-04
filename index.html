@@ -4,442 +4,535 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elolyte — Magnesium-first clean hydration. Founding batch of 50.</title>
-<meta name="description" content="Elolyte is a magnesium-first electrolyte drink mix. Founding batch of 50 boxes, packed in Tallinn, Estonia. €25 for 20 servings. Ships when the first carton is ready.">
+<meta name="description" content="Elolyte is a magnesium-first electrolyte drink mix. Founding batch of 50 packs, packed in Tallinn. $45 once or $39 / month. 30 sachets per pack. Ships when the first carton is ready.">
 <meta name="robots" content="index,follow">
+<meta name="theme-color" content="#f3eee6">
 <link rel="canonical" href="https://elolyte.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Elolyte — Founding batch">
-<meta property="og:description" content="Magnesium-first clean hydration. 50 numbered boxes. €25. Packed in Tallinn when the carton is ready.">
+<meta property="og:description" content="Magnesium-first clean hydration. 50 numbered packs from Tallinn. $45 once or $39 / month. 30 sachets per pack.">
 <meta property="og:url" content="https://elolyte.com/">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Baskerville:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  /* Stripe Payment Links — paste live buy.stripe.com URLs here. No secret keys. */
+  const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";
+  const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription";
+</script>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --cream:#f7f2ea;--warm:#efe9dc;--paper:#faf7f2;--ink:#1c1a17;
-  --brown:#5a4a38;--stone:#9a8a78;--border:#ddd6c8;
-  --orange:#d4572a;--orange-dk:#a83e1a;--orange-lt:#e8795a;
-  --green:#2d5a3d;
-}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
+  :root {
+    --paper: #f3eee6;
+    --cream: #e8e0d2;
+    --card: #faf6ef;
+    --ink: #1b1814;
+    --muted: #6e665b;
+    --line: #d4cbbd;
+    --accent: #c24e24;
+    --accent-ink: #9a3b1a;
+    --white: #fffdf8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { width: min(1080px, calc(100% - 3rem)); margin-inline: auto; }
+  .eyebrow {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .display {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.96;
+  }
+  .muted { color: var(--muted); }
+  .rule { border: 0; border-top: 1px solid var(--line); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    background: var(--ink);
+    color: var(--white);
+    text-decoration: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.95rem 1.55rem;
+    font: 500 0.78rem/1 Inter, system-ui, sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .btn:hover { background: #000; }
+  .btn-accent { background: var(--accent); }
+  .btn-accent:hover { background: var(--accent-ink); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--white); }
 
-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem}
-.logo{font-family:'Archivo Black',sans-serif;font-size:1.3rem;letter-spacing:.08em;color:var(--ink);text-decoration:none;text-transform:uppercase}
-nav ul{list-style:none;display:flex;gap:2rem;align-items:center}
-nav ul a{color:var(--brown);text-decoration:none;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:400;transition:color .2s}
-nav ul a:hover{color:var(--ink)}
-.nav-cta,.btn{background:var(--orange);color:#fff;padding:.55rem 1.3rem;border-radius:2px;text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;display:inline-block;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s}
-.nav-cta:hover,.btn:hover{background:var(--orange-dk);color:#fff}
-.btn-lg{padding:1rem 2rem;font-size:.75rem;letter-spacing:.18em}
-.btn-ink{background:var(--ink)}
-.btn-ink:hover{background:#000}
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+  .logo {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 1.45rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .nav-buy { padding: 0.7rem 1.15rem; }
 
-.hero{background:var(--cream);display:grid;grid-template-columns:55% 45%;min-height:88vh;border-bottom:1px solid var(--border)}
-.hero-left{padding:5rem 4rem 5rem 5rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border)}
-.eyebrow{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--orange);font-weight:500;margin-bottom:1.25rem}
-h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2.8rem,4.8vw,4.8rem);line-height:.93;letter-spacing:-.01em;text-transform:uppercase;color:var(--ink);margin-bottom:1.5rem}
-h1 .serif{font-family:'Libre Baskerville',serif;font-style:italic;text-transform:none;color:var(--orange);font-size:1.05em;font-weight:400}
-.hero-sub{font-size:1.05rem;color:var(--brown);max-width:460px;line-height:1.75;margin-bottom:2rem}
-.hero-sub strong{color:var(--ink);font-weight:500}
-.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-bottom:1.25rem}
-.price-tag{font-family:'Archivo Black',sans-serif;font-size:1.7rem;letter-spacing:-.02em;line-height:1}
-.price-tag span{display:block;font-family:'DM Sans',sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);font-weight:400;margin-top:.25rem}
-.ship-note{font-size:.78rem;color:var(--brown);max-width:440px;line-height:1.65;border-left:2px solid var(--orange);padding-left:.9rem}
-.ship-note strong{color:var(--ink);font-weight:500}
+  .hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: calc(100svh - 68px);
+    padding: 4.5rem 0 5rem;
+  }
+  .hero h1 {
+    font-size: clamp(3.4rem, 7.4vw, 6.4rem);
+    margin: 1.15rem 0 1.4rem;
+    max-width: 11ch;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-lead { max-width: 38ch; color: var(--muted); margin-bottom: 2rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; }
+  .hero-note { font-size: 0.82rem; color: var(--muted); max-width: 36ch; }
 
-.hero-right{background:var(--warm);display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
-.product-card{background:#fff;border:1px solid var(--border);border-radius:3px;width:100%;max-width:380px;padding:1.85rem 1.75rem 1.5rem;box-shadow:0 1px 0 rgba(0,0,0,.02)}
-.product-card h2{font-family:'Archivo Black',sans-serif;font-size:1.15rem;line-height:1.1;text-transform:uppercase;color:var(--ink);margin-bottom:1.2rem}
-.product-card h2 .serif{font-family:'Libre Baskerville',serif;font-style:italic;text-transform:none;color:var(--orange);font-weight:400}
-.spec-row{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.82rem}
-.spec-row:last-of-type{border-bottom:none}
-.spec-label{color:var(--brown)}
-.spec-val{font-weight:500;text-align:right;color:var(--ink)}
-.card-foot{margin-top:1rem;padding-top:1rem;border-top:1px dashed var(--border);font-size:.72rem;color:var(--stone);line-height:1.55}
-.hero-badge{position:absolute;top:1.5rem;right:1.5rem;background:var(--orange);color:#fff;border-radius:50%;width:76px;height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;text-align:center;line-height:1.3;z-index:2;box-shadow:0 4px 14px rgba(212,87,42,.25)}
-.hero-badge strong{font-family:'Archivo Black',sans-serif;font-size:1.05rem;letter-spacing:0;display:block;line-height:1}
+  .still {
+    background: linear-gradient(180deg, var(--cream) 0%, #ddd4c4 100%);
+    border: 1px solid var(--line);
+    min-height: 520px;
+    display: grid;
+    place-items: center;
+    padding: 3rem 2rem;
+    position: relative;
+  }
+  .still-mark {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .still-foot {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .tin { width: min(240px, 70%); filter: drop-shadow(0 22px 28px rgba(27, 24, 20, 0.12)); }
 
-.marquee-wrap{background:var(--ink);overflow:hidden;padding:.85rem 0}
-.marquee-track{display:flex;gap:2.5rem;animation:marquee 28s linear infinite;width:max-content}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.marquee-item{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(247,242,234,.7);white-space:nowrap;display:flex;align-items:center;gap:.75rem}
-.m-dot{width:3px;height:3px;border-radius:50%;background:var(--orange);flex-shrink:0}
+  section { padding: 5.5rem 0; }
+  .section-head { max-width: 40rem; margin-bottom: 2.75rem; }
+  .section-head h2 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); margin: 0.7rem 0 0.9rem; }
 
-.facts{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border)}
-.fact{padding:2.25rem 1.5rem;border-right:1px solid var(--border);text-align:center;background:var(--paper)}
-.fact:last-child{border-right:none}
-.fact-num{font-family:'Archivo Black',sans-serif;font-size:1.85rem;color:var(--ink);line-height:1;letter-spacing:-.02em}
-.fact-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone);margin-top:.45rem}
+  .split { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+  .panel { padding: 2.4rem 2.2rem; background: var(--card); }
+  .panel + .panel { border-left: 1px solid var(--line); }
+  .panel h3 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 1.85rem;
+    margin: 0.55rem 0 1.1rem;
+  }
+  .panel ul { list-style: none; display: grid; gap: 0.85rem; }
+  .panel li {
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+  .panel li strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 0.15rem; }
 
-.section-label{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--orange);font-weight:500;margin-bottom:1rem}
-h2{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,3.2vw,3.2rem);line-height:.95;text-transform:uppercase;color:var(--ink)}
-h2 .serif{font-family:'Libre Baskerville',serif;font-style:italic;text-transform:none;color:var(--orange);font-weight:400}
+  .caution {
+    font-size: 0.88rem;
+    color: var(--muted);
+    max-width: 68ch;
+    padding: 0 0 4rem;
+  }
+  .caution strong { color: var(--ink); font-weight: 500; }
 
-.what{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
-.what-left{padding:5.5rem 4rem 5.5rem 5rem;border-right:1px solid var(--border);background:var(--cream);display:flex;flex-direction:column;justify-content:center}
-.what-left p{color:var(--brown);font-size:.95rem;line-height:1.8;max-width:400px;margin-top:1.4rem}
-.what-right{padding:4rem;display:flex;flex-direction:column;justify-content:center;background:var(--paper)}
-.what-row{padding:1.35rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:2rem 1fr;gap:1rem;align-items:start}
-.what-row:last-child{border-bottom:none}
-.what-num{font-family:'Archivo Black',sans-serif;font-size:.72rem;color:var(--orange);margin-top:.15rem}
-.what-title{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;color:var(--ink);margin-bottom:.25rem}
-.what-text{font-size:.85rem;color:var(--stone);line-height:1.65}
+  .batch {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .batch-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2.4rem 2.2rem 2.2rem;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .batch-no {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(4.2rem, 8vw, 6.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+  .batch-no span { color: #8a8174; }
+  .batch-meta { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #b7aea0; }
+  .terms { display: grid; gap: 1.35rem; }
+  .term { display: grid; grid-template-columns: 2.4rem 1fr; gap: 1rem; }
+  .term-n { font-size: 0.7rem; letter-spacing: 0.16em; color: var(--accent); padding-top: 0.3rem; }
+  .term h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.25rem; }
+  .term p { color: var(--muted); font-size: 0.95rem; }
 
-.pillars{padding:5.5rem 5rem;background:var(--paper);border-bottom:1px solid var(--border)}
-.pillars-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;gap:2rem}
-.pillars-sub{font-size:.85rem;color:var(--stone);max-width:280px;line-height:1.7;text-align:right}
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:3px;overflow:hidden}
-.pillar{padding:2.25rem;border-right:1px solid var(--border);background:#fff}
-.pillar:last-child{border-right:none}
-.pillar-num{font-family:'Archivo Black',sans-serif;font-size:.66rem;letter-spacing:.2em;color:var(--orange);margin-bottom:1rem}
-.pillar h3{font-family:'Archivo Black',sans-serif;font-size:1rem;text-transform:uppercase;color:var(--ink);margin-bottom:.6rem;line-height:1.15}
-.pillar p{font-size:.83rem;color:var(--stone);line-height:1.7}
+  .buy-band {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .offer {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 2rem 1.85rem 1.85rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .offer-featured { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .offer-featured .eyebrow { color: #e08a68; }
+  .offer-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+  }
+  .offer-featured .offer-tag { color: #e08a68; }
+  .offer .price {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(3.4rem, 6vw, 4.6rem);
+    line-height: 0.85;
+    margin: 0.35rem 0;
+  }
+  .offer .unit {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0;
+    color: var(--muted);
+  }
+  .offer-featured .unit { color: #b7aea0; }
+  .offer ul {
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+    margin: 1.35rem 0 1.7rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .offer-featured ul { color: #c8bfb2; }
+  .offer .btn { width: 100%; margin-top: auto; }
 
-.caution{background:var(--warm);padding:1.5rem 5rem;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--brown);line-height:1.65}
-.caution strong{color:var(--ink);font-weight:500}
+  .faq { display: grid; border-top: 1px solid var(--line); }
+  details { border-bottom: 1px solid var(--line); padding: 1.35rem 0; }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--muted);
+    line-height: 1;
+  }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); max-width: 62ch; margin-top: 0.75rem; padding-right: 3rem; }
 
-.terms{background:var(--ink);padding:5.5rem 5rem;color:var(--cream)}
-.terms .section-label{color:var(--orange-lt)}
-.terms h2{color:var(--cream);margin-bottom:1.25rem}
-.terms h2 .serif{color:var(--orange-lt)}
-.terms-lead{color:#8a7a68;font-size:.95rem;line-height:1.8;max-width:520px;margin-bottom:2.5rem}
-.terms-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid #3a342c}
-.term{padding:1.75rem;border-right:1px solid #3a342c;border-bottom:1px solid #3a342c}
-.term:nth-child(2n){border-right:none}
-.term:nth-child(n+3){border-bottom:none}
-.term-num{font-family:'Archivo Black',sans-serif;font-size:.66rem;letter-spacing:.2em;color:var(--orange-lt);margin-bottom:.7rem}
-.term h3{font-size:1rem;text-transform:uppercase;font-family:'Archivo Black',sans-serif;margin-bottom:.5rem;line-height:1.2}
-.term p{font-size:.85rem;color:#b0a090;line-height:1.7}
+  footer {
+    padding: 2.4rem 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  footer a { color: var(--muted); text-underline-offset: 3px; }
+  footer a:hover { color: var(--ink); }
+  .fineprint {
+    width: 100%;
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: #8a8276;
+    max-width: 68ch;
+  }
 
-.buy{padding:5.5rem 5rem;background:var(--cream);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
-.buy-price{font-family:'Archivo Black',sans-serif;font-size:clamp(3.2rem,6vw,5rem);line-height:.9;letter-spacing:-.02em;margin:.4rem 0 1rem}
-.buy-price small{font-family:'DM Sans',sans-serif;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brown);font-weight:400;display:block;margin-top:.75rem}
-.buy p{color:var(--brown);font-size:.95rem;line-height:1.8;max-width:440px;margin-bottom:1.5rem}
-.buy-card{background:#fff;border:1px solid var(--border);border-radius:3px;padding:2rem}
-.buy-card h3{font-family:'Archivo Black',sans-serif;font-size:1.15rem;text-transform:uppercase;margin-bottom:.35rem}
-.buy-card .sub{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);margin-bottom:1.5rem}
-.buy-list{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.5rem}
-.buy-list li{font-size:.88rem;color:var(--brown);display:flex;gap:.7rem;line-height:1.5}
-.tick{width:18px;height:18px;border-radius:50%;background:rgba(212,87,42,.12);border:1px solid rgba(212,87,42,.35);display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--orange);flex-shrink:0;margin-top:.15rem}
-.fine{font-size:.72rem;color:var(--stone);line-height:1.55;margin-top:1rem}
-
-.faq{padding:5.5rem 5rem;background:var(--paper);border-bottom:1px solid var(--border)}
-.faq-sub{font-size:.9rem;color:var(--stone);margin:0.5rem 0 2.5rem;max-width:520px;line-height:1.7}
-.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;border-top:1px solid var(--border)}
-.faq-item{padding:1.5rem 0;border-bottom:1px solid var(--border)}
-.faq-item h3{font-size:.95rem;font-weight:500;color:var(--ink);margin-bottom:.5rem}
-.faq-item p{font-size:.85rem;color:var(--stone);line-height:1.7}
-
-.final-cta{background:var(--orange);padding:4.5rem 5rem;text-align:center;color:#fff}
-.final-cta h2{color:#fff;margin-bottom:1rem}
-.final-cta h2 .serif{color:#fff}
-.final-cta p{font-size:.95rem;max-width:480px;margin:0 auto 2rem;opacity:.92;line-height:1.7}
-.final-cta-meta{margin-top:1.25rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
-
-footer{background:var(--ink);padding:2.5rem 5rem;display:grid;grid-template-columns:1fr auto auto;gap:2rem;align-items:center}
-footer .logo{color:var(--cream)}
-footer p,footer a{font-size:.72rem;color:#8a7a68;letter-spacing:.04em;text-decoration:none}
-footer a:hover{color:var(--cream)}
-.footer-meta{text-align:right}
-
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-@media(max-width:900px){
-  nav{padding:1rem 1.5rem}
-  nav ul{display:none}
-  .hero,.what,.buy{grid-template-columns:1fr}
-  .hero-left,.what-left{padding:3.5rem 1.5rem;border-right:none;border-bottom:1px solid var(--border)}
-  .hero-right{min-height:auto;padding:2.5rem 1.5rem}
-  .what-right{padding:2.5rem 1.5rem}
-  .pillars,.terms,.buy,.faq,.final-cta,.caution{padding:3.5rem 1.5rem}
-  .pillars-grid{grid-template-columns:1fr}
-  .pillar{border-right:none;border-bottom:1px solid var(--border)}
-  .pillar:last-child{border-bottom:none}
-  .pillars-header{flex-direction:column;align-items:flex-start;gap:1rem}
-  .pillars-sub{text-align:left;max-width:100%}
-  .facts{grid-template-columns:repeat(2,1fr)}
-  .fact:nth-child(2n){border-right:none}
-  .terms-grid{grid-template-columns:1fr}
-  .term,.term:nth-child(2n){border-right:none}
-  .term{border-bottom:1px solid #3a342c}
-  .term:last-child{border-bottom:none}
-  .faq-list{grid-template-columns:1fr}
-  footer{grid-template-columns:1fr;text-align:center;padding:2rem 1.5rem}
-  .footer-meta{text-align:center}
-}
+  @media (max-width: 860px) {
+    .wrap { width: min(1080px, calc(100% - 2rem)); }
+    .hero, .batch, .offers, .split { grid-template-columns: 1fr; }
+    .hero { gap: 2.25rem; padding: 2.5rem 0 3.5rem; min-height: unset; }
+    .still { min-height: 380px; }
+    .panel + .panel { border-left: 0; border-top: 1px solid var(--line); }
+    section { padding: 3.75rem 0; }
+    .caution { padding-bottom: 2.5rem; }
+    details p { padding-right: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
 </style>
 </head>
 <body>
-
-<nav>
-  <a href="#" class="logo">Elolyte</a>
-  <ul>
-    <li><a href="#what">What it is</a></li>
-    <li><a href="#terms">Founding batch</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#buy" class="nav-cta" data-stripe-buy>Buy — €25</a></li>
-  </ul>
-</nav>
-
-<section class="hero">
-  <div class="hero-left">
-    <div class="eyebrow">Founding batch of 50 · Tallinn, Estonia</div>
-    <h1>Magnesium-first<br>clean <span class="serif">hydration.</span></h1>
-    <p class="hero-sub">Elolyte is a clean electrolyte powder for people who already read labels — builders, founders, and anyone who wants electrolytes for daily work, not a sugar drink with a gym logo.</p>
-    <div class="hero-actions">
-      <a class="btn btn-lg" href="#buy" data-stripe-buy>Buy founding box — €25</a>
-      <div class="price-tag">€25<span>20 servings · one box</span></div>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top">Elolyte</a>
+      <a class="btn btn-accent nav-buy" href="#buy">Buy</a>
     </div>
-    <p class="ship-note"><strong>Not in stock for next-day shipping.</strong> Founding batch · ships from Estonia when the first carton is ready (target within 4–6 weeks of order) · full refund if we cannot ship.</p>
-  </div>
-  <div class="hero-right">
-    <div class="hero-badge"><strong>50</strong>boxes</div>
-    <div class="product-card">
-      <h2>The founding <span class="serif">box.</span></h2>
-      <div class="spec-row"><span class="spec-label">What</span><span class="spec-val">Magnesium-first electrolytes</span></div>
-      <div class="spec-row"><span class="spec-label">Form</span><span class="spec-val">Hydration powder</span></div>
-      <div class="spec-row"><span class="spec-label">Formula</span><span class="spec-val">Founding formula · one flavor</span></div>
-      <div class="spec-row"><span class="spec-label">Sugar</span><span class="spec-val">Zero / near-zero</span></div>
-      <div class="spec-row"><span class="spec-label">Servings</span><span class="spec-val">20 per box</span></div>
-      <div class="spec-row"><span class="spec-label">Packed by</span><span class="spec-val">Alan, in Tallinn</span></div>
-      <p class="card-foot">Exact milligrams land when the supplier locks the formula. Until then: magnesium-first, clean label, no invented lab claims.</p>
-    </div>
-  </div>
-</section>
+  </header>
 
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item"><span class="m-dot"></span>Magnesium-first</span>
-    <span class="marquee-item"><span class="m-dot"></span>Founding batch of 50</span>
-    <span class="marquee-item"><span class="m-dot"></span>Packed in Tallinn</span>
-    <span class="marquee-item"><span class="m-dot"></span>Ships when the carton is ready</span>
-    <span class="marquee-item"><span class="m-dot"></span>Full refund if we cannot ship</span>
-    <span class="marquee-item"><span class="m-dot"></span>Clean electrolytes for daily work</span>
-    <span class="marquee-item"><span class="m-dot"></span>Zero / near-zero sugar</span>
-    <span class="marquee-item"><span class="m-dot"></span>Founding formula</span>
-    <span class="marquee-item"><span class="m-dot"></span>Magnesium-first</span>
-    <span class="marquee-item"><span class="m-dot"></span>Founding batch of 50</span>
-    <span class="marquee-item"><span class="m-dot"></span>Packed in Tallinn</span>
-    <span class="marquee-item"><span class="m-dot"></span>Ships when the carton is ready</span>
-    <span class="marquee-item"><span class="m-dot"></span>Full refund if we cannot ship</span>
-    <span class="marquee-item"><span class="m-dot"></span>Clean electrolytes for daily work</span>
-    <span class="marquee-item"><span class="m-dot"></span>Zero / near-zero sugar</span>
-    <span class="marquee-item"><span class="m-dot"></span>Founding formula</span>
-  </div>
-</div>
-
-<div class="facts">
-  <div class="fact"><div class="fact-num">50</div><div class="fact-label">Founding boxes</div></div>
-  <div class="fact"><div class="fact-num">€25</div><div class="fact-label">Per box</div></div>
-  <div class="fact"><div class="fact-num">20</div><div class="fact-label">Servings</div></div>
-  <div class="fact"><div class="fact-num">EE</div><div class="fact-label">Packed in Estonia</div></div>
-</div>
-
-<section class="what" id="what">
-  <div class="what-left reveal">
-    <div class="section-label">What it is</div>
-    <h2>Clean electrolytes<br>for daily <span class="serif">work.</span></h2>
-    <p>Most hydration powders are built like sports drinks. Elolyte is magnesium-first and kept simple: a founding formula you can actually read, mixed into water, for days at a desk — not a race.</p>
-  </div>
-  <div class="what-right">
-    <div class="what-row reveal">
-      <div class="what-num">01</div>
+  <main id="top">
+    <div class="wrap hero">
       <div>
-        <div class="what-title">Magnesium-first electrolytes</div>
-        <div class="what-text">The point of the mix is magnesium, with the usual supporting electrolytes. We will not list a fake “12 electrolytes” count until the supplier formula is locked.</div>
+        <p class="eyebrow">Founding batch · Tallinn</p>
+        <h1 class="display">Magnesium-first <em>hydration.</em></h1>
+        <p class="hero-lead">A clean electrolyte powder for people who read labels. One founding formula. Fifty numbered packs, packed by Alan in Tallinn. No waitlist theatre.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#buy">One-time $45 or subscribe $39</a>
+          <p class="hero-note">First pack ships from Estonia when the first carton is ready. Full refund if we cannot ship.</p>
+        </div>
       </div>
+      <aside class="still" aria-hidden="true">
+        <span class="still-mark">01 / 50</span>
+        <svg class="tin" viewBox="0 0 240 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="120" cy="42" rx="78" ry="18" fill="#cfc6b6"/>
+          <rect x="42" y="42" width="156" height="22" fill="#d8d0c0"/>
+          <ellipse cx="120" cy="64" rx="78" ry="18" fill="#b9b09f"/>
+          <rect x="46" y="64" width="148" height="230" fill="#f7f2ea"/>
+          <ellipse cx="120" cy="294" rx="74" ry="16" fill="#e7dfd1"/>
+          <path d="M46 64v230c0 8.8 33.1 16 74 16s74-7.2 74-16V64" stroke="#cfc6b6"/>
+          <rect x="46" y="118" width="148" height="96" fill="#1b1814"/>
+          <text x="120" y="162" text-anchor="middle" fill="#f3eee6" font-family="Georgia, serif" font-size="22">ELOLYTE</text>
+          <text x="120" y="186" text-anchor="middle" fill="#c24e24" font-family="Arial, sans-serif" font-size="8" letter-spacing="3">FOUNDING BATCH</text>
+          <ellipse cx="120" cy="64" rx="74" ry="14" fill="#efe8db"/>
+          <ellipse cx="120" cy="60" rx="48" ry="7" fill="#fbf7f0" opacity=".7"/>
+        </svg>
+        <p class="still-foot">Magnesium-first · 30 sachets · Alan, Tallinn</p>
+      </aside>
     </div>
-    <div class="what-row reveal">
-      <div class="what-num">02</div>
-      <div>
-        <div class="what-title">Zero / near-zero sugar</div>
-        <div class="what-text">Not a juice-adjacent sports drink. The founding formula is meant to stay clean on sugar. Final grams print on the pouch when production is set.</div>
+
+    <hr class="rule">
+
+    <section id="formula">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">What it is</p>
+          <h2 class="display">On the label. Left on the bench.</h2>
+          <p class="muted">Most hydration powders are built like sports drinks. Elolyte is magnesium-first and kept simple — mixed into water, for days at a desk, not a race.</p>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <p class="eyebrow">In</p>
+            <h3>The founding formula</h3>
+            <ul>
+              <li><strong>Magnesium-first electrolytes</strong> Magnesium is the point of the mix, with supporting salts as the formula settles. We will not list a fake “12 electrolytes” count until the supplier formula is locked.</li>
+              <li><strong>Zero / near-zero sugar</strong> Not a juice-adjacent sports drink. Final grams print on the pouch when production is set.</li>
+              <li><strong>One founding flavor</strong> Lemon/lime or an unflavored clean cut — whichever the first carton actually is. No invented tasting notes.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <p class="eyebrow">Out</p>
+            <h3>What stays out</h3>
+            <ul>
+              <li><strong>Sugar-drink theatre</strong> No neon dyes. No pile of sweeteners chasing a candy aftertaste.</li>
+              <li><strong>Warehouse fiction</strong> No “ships tomorrow.” No fake founder counts. No invented testimonials.</li>
+              <li><strong>Medical claims</strong> Clean electrolytes for daily work. Not a treatment, not a cure, not medical advice.</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <div class="wrap">
+      <p class="caution"><strong>Food supplement, not medicine.</strong> Elolyte is a hydration powder. It does not diagnose, treat, or prevent disease. If you are pregnant, breastfeeding, on medication, or have a medical condition, ask a doctor before using a food supplement. Keep out of reach of children. Do not exceed the serving on the pouch when it ships.</p>
     </div>
-    <div class="what-row reveal">
-      <div class="what-num">03</div>
-      <div>
-        <div class="what-title">Founding formula · one flavor</div>
-        <div class="what-text">One mix for this batch — lemon/lime or an unflavored clean cut, whichever the first carton actually is. We will not invent tasting notes we have not mixed yet.</div>
+
+    <section id="batch">
+      <div class="wrap batch">
+        <div class="batch-card">
+          <p class="batch-meta">Founding carton</p>
+          <p class="batch-no">01 <span>/</span> 50</p>
+          <p class="batch-meta">Packed by Alan · Tallinn, Estonia</p>
+        </div>
+        <div>
+          <p class="eyebrow">The deal</p>
+          <h2 class="display" style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin: 0.7rem 0 1.6rem;">Fifty numbered packs. Then we pack.</h2>
+          <div class="terms">
+            <div class="term">
+              <span class="term-n">01</span>
+              <div>
+                <h3>A first carton, not a warehouse</h3>
+                <p>You are buying a numbered pack from a run of fifty — packed by hand in Tallinn when that carton is ready. Not a SKU with a tracking number today.</p>
+              </div>
+            </div>
+            <div class="term">
+              <span class="term-n">02</span>
+              <div>
+                <h3>Target: 4–6 weeks</h3>
+                <p>Alan packs and ships from Estonia when the first carton is ready. If the window slips, you will hear from us. If we cannot ship, you get a full refund.</p>
+              </div>
+            </div>
+            <div class="term">
+              <span class="term-n">03</span>
+              <div>
+                <h3>Same pack, two ways</h3>
+                <p>Thirty sachets — thirty drinks — either way: $45 once, or $39 each month (USD). Subscribe is not a warehouse on tap — the first pack waits on the founding carton; later packs go out after stock is flowing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <div class="buy-band" id="buy">
+      <section>
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Founding pack</p>
+            <h2 class="display">One pack. Two ways.</h2>
+            <p class="muted">Same pack: 30 sachets, 30 drinks. Prices in USD. Choose once, or subscribe and save. Shipping address on Stripe.</p>
+          </div>
+          <div class="offers">
+            <article class="offer">
+              <p class="offer-tag">One-time</p>
+              <p class="eyebrow">Single pack</p>
+              <p class="price">$45</p>
+              <ul>
+                <li>One founding pack, paid once — 30 sachets / 30 drinks</li>
+                <li>Ships from Tallinn when the first carton is ready — target 4–6 weeks</li>
+                <li>Full refund if we cannot ship</li>
+              </ul>
+              <a class="btn btn-ghost" data-buy="one-time" href="#buy">Buy once — $45</a>
+            </article>
+            <article class="offer offer-featured">
+              <p class="offer-tag">Subscribe &amp; save</p>
+              <p class="eyebrow">Monthly</p>
+              <p class="price">$39 <span class="unit">/ month</span></p>
+              <ul>
+                <li>Same founding pack, billed monthly — 30 sachets / 30 drinks</li>
+                <li>First pack ships with the founding carton — not from a warehouse</li>
+                <li>Renewals only after stock is flowing. Full refund if the first pack cannot ship</li>
+              </ul>
+              <a class="btn btn-accent" data-buy="subscription" href="#buy">Subscribe — $39 / mo</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="what-row reveal">
-      <div class="what-num">04</div>
-      <div>
-        <div class="what-title">Clean label, on purpose</div>
-        <div class="what-text">Built for people who already skip the junk. No disease claims. Food-supplement caution applies; this is not medicine.</div>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2 class="display">Short answers.</h2>
+          <p class="muted">If something is still being decided (exact flavor, exact milligrams), we say so.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>When does it ship?</summary>
+            <p>When the first carton is ready, from Estonia. Target within 4–6 weeks of your order. One-time and first subscription packs wait on the same carton. Not next-day stock.</p>
+          </details>
+          <details>
+            <summary>How does the monthly subscription work?</summary>
+            <p>$39 USD per month for the same founding pack (30 sachets / 30 drinks). The first pack ships with founding-batch timing. Renewals go out only after stock is flowing — we are not pretending there is endless inventory. Cancel anytime in Stripe. If the first pack cannot ship, you get a full refund.</p>
+          </details>
+          <details>
+            <summary>What if you cannot ship?</summary>
+            <p>Full refund on the first pack we cannot send. If the founding carton does not happen, the money comes back. That is the deal.</p>
+          </details>
+          <details>
+            <summary>Who packs this, and from where?</summary>
+            <p>Alan Pafka packs and ships from Tallinn, Estonia. Founding batch only — no warehouse story.</p>
+          </details>
+          <details>
+            <summary>Is this medicine?</summary>
+            <p>No. Elolyte is a food supplement / hydration powder. It does not diagnose, treat, cure, or prevent any disease. If you need medical advice, ask a clinician — not this page.</p>
+          </details>
+          <details>
+            <summary>What’s actually in it?</summary>
+            <p>Magnesium-first electrolytes, zero / near-zero sugar, clean label. One founding formula for this run: lemon/lime or unflavored, whichever the first carton actually is. Exact amounts print when the supplier locks the formula. We will not invent a “12 electrolytes” scoreboard.</p>
+          </details>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-<section class="pillars">
-  <div class="pillars-header">
-    <h2 class="reveal">What’s in.<br>What’s honest.</h2>
-    <p class="pillars-sub reveal">Until the carton is packed, this is the honest version of the label — not a lab brochure.</p>
-  </div>
-  <div class="pillars-grid">
-    <div class="pillar reveal">
-      <div class="pillar-num">In —</div>
-      <h3>Magnesium-first mix</h3>
-      <p>Electrolytes with magnesium as the lead. Supporting salts as the formula settles. That’s the product.</p>
-    </div>
-    <div class="pillar reveal">
-      <div class="pillar-num">Out —</div>
-      <h3>Sugar-drink theatre</h3>
-      <p>No “ships tomorrow” inventory fiction. No fake founder counts. No invented testimonials. Zero / near-zero sugar is the intent.</p>
-    </div>
-    <div class="pillar reveal">
-      <div class="pillar-num">Why —</div>
-      <h3>Daily work, not a gym ad</h3>
-      <p>Clean electrolytes for people who already read labels. Soft copy only. Not a treatment, not a cure, not medical advice.</p>
-    </div>
-  </div>
-</section>
+  <hr class="rule">
 
-<p class="caution"><strong>Food supplement, not medicine.</strong> Elolyte is a hydration powder. It does not diagnose, treat, or prevent disease. If you are pregnant, breastfeeding, on medication, or have a medical condition, ask a doctor before using a food supplement. Keep out of reach of children. Do not exceed the serving on the pouch when it ships.</p>
+  <footer class="wrap">
+    <a class="logo" href="#top">Elolyte</a>
+    <a href="mailto:hello@elolyte.com">hello@elolyte.com</a>
+    <p class="fineprint">Alan Pafka · Tallinn, Estonia. Food supplement. Not medical advice. Founding batch packed in Estonia. © Elolyte</p>
+  </footer>
 
-<section class="terms" id="terms">
-  <div class="section-label">The deal</div>
-  <h2>Founding batch <span class="serif">terms.</span></h2>
-  <p class="terms-lead">This is a small first carton, packed by hand. You are buying a numbered box from that run — not a warehouse SKU with a tracking number today.</p>
-  <div class="terms-grid">
-    <div class="term">
-      <div class="term-num">01</div>
-      <h3>Fifty numbered boxes</h3>
-      <p>The founding batch is limited to 50. When those are sold, this page stops selling this run. No fake “53 spots left” counters.</p>
-    </div>
-    <div class="term">
-      <div class="term-num">02</div>
-      <h3>Ships when the carton is ready</h3>
-      <p>Alan packs and ships from Tallinn, Estonia when the first carton is ready. Target: within 4–6 weeks of your order. Not next-day. Not “in stock now.”</p>
-    </div>
-    <div class="term">
-      <div class="term-num">03</div>
-      <h3>Full refund if we cannot ship</h3>
-      <p>If the carton does not happen and we cannot ship, you get a full refund. That is the risk we take, not you.</p>
-    </div>
-    <div class="term">
-      <div class="term-num">04</div>
-      <h3>One person, one carton</h3>
-      <p>No warehouse, no 3PL for this batch. Questions go to the email in the footer. You’ll hear from a person in Tallinn.</p>
-    </div>
-  </div>
-</section>
-
-<section class="buy" id="buy">
-  <div>
-    <div class="section-label">Founding box</div>
-    <div class="buy-price">€25<small>20 servings · one-time</small></div>
-    <p>Pay now. We collect a shipping address at checkout. The box goes out from Estonia when the carton is ready — target 4–6 weeks. Full refund if we cannot ship.</p>
-    <a class="btn btn-lg" href="#buy" data-stripe-buy>Buy founding box — €25</a>
-  </div>
-  <div class="buy-card">
-    <h3>What’s in the box</h3>
-    <p class="sub">Elolyte founding batch</p>
-    <ul class="buy-list">
-      <li><span class="tick">✓</span><span>One founding box — 20 servings of founding-formula powder</span></li>
-      <li><span class="tick">✓</span><span>Magnesium-first electrolytes, clean label, zero / near-zero sugar</span></li>
-      <li><span class="tick">✓</span><span>Packed and shipped by Alan from Tallinn, Estonia</span></li>
-      <li><span class="tick">✓</span><span>Numbered in the first 50 — when they’re gone, they’re gone</span></li>
-    </ul>
-    <a class="btn btn-lg" style="width:100%;text-align:center" href="#buy" data-stripe-buy>Checkout — €25</a>
-    <p class="fine">Checkout is Stripe. We do not store your card on this site. If the payment link still says <code>test_placeholder</code>, checkout is not live yet — email hello@elolyte.com.</p>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="section-label">Questions</div>
-  <h2>Straightforward <span class="serif">answers.</span></h2>
-  <p class="faq-sub">No waitlist theatre. If something is still being decided (exact flavor, exact milligrams), we say so.</p>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h3>When does it ship?</h3>
-      <p>When the first carton is ready, from Estonia. Target within 4–6 weeks of your order. You will not get a next-day courier scan. If that window slips, you’ll hear from us.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What if you cannot ship?</h3>
-      <p>Full refund. If the founding carton does not happen, the money comes back. That is the deal.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Who packs this, and from where?</h3>
-      <p>Alan Pafka packs and ships from Tallinn, Estonia. Founding batch only — no warehouse story.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Is this medical advice?</h3>
-      <p>No. Elolyte is a food-style hydration powder, not a medicine. It does not treat or prevent disease. If you need medical advice, ask a clinician — not this page.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What’s the flavor?</h3>
-      <p>One founding formula for this run: lemon/lime or unflavored clean, whichever the first carton actually is. We will not fake a tasting panel.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What’s actually in it?</h3>
-      <p>Magnesium-first electrolytes, zero / near-zero sugar, clean label. Exact amounts print when the supplier locks the formula. Until then we will not invent a “12 electrolytes” scoreboard.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How many boxes?</h3>
-      <p>Fifty. This page does not show a live remaining-count because we are not going to fake one. If checkout is closed, the batch is sold.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How do I pay?</h3>
-      <p>Stripe Payment Link, €25 one-time, shipping address collected at checkout. Questions: hello@elolyte.com.</p>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <h2>Fifty boxes.<br>Then this run <span class="serif">closes.</span></h2>
-  <p>Founding batch · ships from Estonia when the first carton is ready (target within 4–6 weeks of order) · full refund if we cannot ship.</p>
-  <a class="btn btn-lg btn-ink" href="#buy" data-stripe-buy>Buy founding box — €25</a>
-  <div class="final-cta-meta">€25 · 20 servings · Packed in Tallinn</div>
-</section>
-
-<footer>
-  <a href="#" class="logo">Elolyte</a>
-  <p>Alan Pafka · Tallinn, Estonia<br><a href="mailto:hello@elolyte.com">hello@elolyte.com</a></p>
-  <div class="footer-meta">
-    <p>Food supplement. Not medical advice.</p>
-    <p>elolyte.com</p>
-  </div>
-</footer>
-
-<script>
-  // ---------------------------------------------------------------------------
-  // STRIPE — Alan: create a Payment Link and paste the URL here.
-  // Product: "Elolyte Founding Batch — €25" · one-time · collect shipping address
-  // Dashboard → Payment Links → New → paste the https://buy.stripe.com/... URL
-  // ---------------------------------------------------------------------------
-  const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/test_placeholder';
-
-  (function () {
-    const url = STRIPE_PAYMENT_LINK;
-    const live = url && !url.includes('REPLACE_ME') && !url.includes('test_placeholder');
-    document.querySelectorAll('[data-stripe-buy]').forEach(function (el) {
-      if (live) {
-        el.setAttribute('href', url);
-        el.setAttribute('rel', 'noopener');
-      } else {
-        el.setAttribute('href', '#buy');
-        el.addEventListener('click', function (e) {
-          if (el.closest('#buy')) {
-            e.preventDefault();
-            alert('Checkout is not live yet. Alan needs to paste a Stripe Payment Link into STRIPE_PAYMENT_LINK in index.html. Meanwhile: hello@elolyte.com');
-          }
-        });
+  <script>
+    (function () {
+      const links = {
+        "one-time": STRIPE_PAYMENT_LINK_ONE_TIME,
+        subscription: STRIPE_PAYMENT_LINK_SUBSCRIPTION
+      };
+      function isLive(url) {
+        return url && !/placeholder|REPLACE/i.test(url);
       }
-    });
-  })();
-
-  const obs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
-</script>
+      document.querySelectorAll("[data-buy]").forEach(function (el) {
+        const url = links[el.getAttribute("data-buy")];
+        el.setAttribute("rel", "noopener noreferrer");
+        if (isLive(url)) {
+          el.setAttribute("href", url);
+        } else {
+          el.setAttribute("href", "#buy");
+          el.addEventListener("click", function (e) {
+            e.preventDefault();
+            alert("Checkout is not live yet. Alan needs to paste Stripe Payment Links into STRIPE_PAYMENT_LINK_ONE_TIME and STRIPE_PAYMENT_LINK_SUBSCRIPTION in index.html. Meanwhile: hello@elolyte.com");
+          });
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
