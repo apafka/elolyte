@@ -4,20 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elolyte — Founding batch</title>
-<meta name="description" content="Magnesium-first clean hydration powder. Founding batch of 50 boxes, packed in Tallinn. €25. Ships when the first carton is ready.">
+<meta name="description" content="Magnesium-first clean hydration powder. Founding batch of 50 boxes, packed in Tallinn. €25 once or €23 / month. Ships when the first carton is ready.">
 <meta name="theme-color" content="#f3eee6">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://elolyte.com/">
 <meta property="og:title" content="Elolyte — Founding batch">
-<meta property="og:description" content="Magnesium-first clean hydration powder. Fifty boxes from Tallinn. €25.">
+<meta property="og:description" content="Magnesium-first clean hydration powder. Fifty boxes from Tallinn. €25 once or €23 / month.">
 <meta property="og:url" content="https://elolyte.com/">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script>
-  /* Paste your live Stripe Payment Link URL here (Dashboard → Payment Links). */
-  const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_REPLACE_WITH_YOUR_PAYMENT_LINK";
+  /* Paste live Stripe Payment Link URLs here (Dashboard → Payment Links). */
+  const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_REPLACE_ONE_TIME";
+  const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_REPLACE_SUBSCRIPTION";
 </script>
 <style>
   :root {
@@ -233,35 +234,59 @@
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
-  .buy {
+  .offers {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 3.5rem;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2.4rem;
   }
-  .price {
-    font-family: "Instrument Serif", Georgia, serif;
-    font-size: clamp(4.5rem, 9vw, 7rem);
-    line-height: 0.85;
-    margin: 0.8rem 0 0.9rem;
-  }
-  .buy-aside {
+  .offer {
     background: var(--card);
     border: 1px solid var(--line);
-    padding: 2rem;
-  }
-  .buy-aside dl { display: grid; gap: 0.85rem; margin: 1.25rem 0 1.6rem; }
-  .buy-aside div {
+    padding: 2rem 1.85rem 1.85rem;
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-bottom: 0.85rem;
-    border-bottom: 1px solid var(--line);
-    font-size: 0.92rem;
+    flex-direction: column;
+    min-height: 100%;
   }
-  .buy-aside dt { color: var(--muted); }
-  .buy-aside dd { font-weight: 500; text-align: right; }
-  .buy-aside .btn { width: 100%; }
+  .offer-featured {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .offer-featured .eyebrow { color: #e08a68; }
+  .offer-featured .muted,
+  .offer-featured .hero-note { color: #b7aea0; }
+  .offer-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+  }
+  .offer-featured .offer-tag { color: #e08a68; }
+  .offer .price {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(3.4rem, 6vw, 4.6rem);
+    line-height: 0.85;
+    margin: 0.35rem 0 0.35rem;
+  }
+  .offer .unit {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0;
+    color: var(--muted);
+  }
+  .offer-featured .unit { color: #b7aea0; }
+  .offer ul {
+    list-style: none;
+    display: grid;
+    gap: 0.65rem;
+    margin: 1.35rem 0 1.7rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .offer-featured ul { color: #c8bfb2; }
+  .offer .btn { width: 100%; margin-top: auto; }
 
   /* FAQ */
   .faq { display: grid; gap: 0; border-top: 1px solid var(--line); }
@@ -316,12 +341,11 @@
 
   @media (max-width: 860px) {
     .wrap { width: min(1080px, calc(100% - 2rem)); }
-    .hero, .batch, .buy, .split { grid-template-columns: 1fr; }
+    .hero, .batch, .offers, .split { grid-template-columns: 1fr; }
     .hero { gap: 2.25rem; padding: 2.5rem 0 3.5rem; min-height: unset; }
     .still { min-height: 380px; }
     .panel + .panel { border-left: 0; border-top: 1px solid var(--line); }
     section { padding: 3.75rem 0; }
-    .buy { gap: 2rem; }
     details p { padding-right: 0; }
   }
 
@@ -335,7 +359,7 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="logo" href="#top">Elolyte</a>
-      <a class="btn btn-accent nav-buy" data-buy href="#buy">Buy — €25</a>
+      <a class="btn btn-accent nav-buy" href="#buy">Buy</a>
     </div>
   </header>
 
@@ -346,8 +370,8 @@
         <h1 class="display">Magnesium-first <em>hydration.</em></h1>
         <p class="hero-lead">A clean electrolyte powder for people who read labels. One founding formula. Fifty boxes. No waitlist theatre.</p>
         <div class="hero-actions">
-          <a class="btn btn-accent" data-buy href="#buy">Buy founding box — €25</a>
-          <p class="hero-note">Ships from Estonia when the first carton is ready. Full refund if we cannot ship.</p>
+          <a class="btn btn-accent" href="#buy">One-time €25 or subscribe €23</a>
+          <p class="hero-note">First box ships from Estonia when the first carton is ready. Full refund if we cannot ship.</p>
         </div>
       </div>
       <aside class="still" aria-hidden="true">
@@ -429,7 +453,7 @@
               <span class="term-n">03</span>
               <div>
                 <h3>About 20 servings</h3>
-                <p>€25 for the founding box. Mix with water. That is the product.</p>
+                <p>The same founding box either way: €25 once, or €23 each month. Mix with water. That is the product.</p>
               </div>
             </div>
           </div>
@@ -439,24 +463,36 @@
 
     <div class="buy-band" id="buy">
       <section>
-        <div class="wrap buy">
-          <div>
+        <div class="wrap">
+          <div class="section-head">
             <p class="eyebrow">Founding box</p>
-            <p class="price">€25</p>
-            <p class="muted" style="max-width: 36ch;">One tin. About twenty servings. Magnesium-first electrolytes. Packed in Tallinn when the first carton is ready.</p>
+            <h2 class="display">One box. Two ways.</h2>
+            <p class="muted">Same tin, about twenty servings. Choose once, or subscribe and save. Address on Stripe.</p>
           </div>
-          <aside class="buy-aside">
-            <p class="eyebrow">Order</p>
-            <h2 class="display" style="font-size: 2rem; margin-top: 0.45rem;">Elolyte founding batch</h2>
-            <dl>
-              <div><dt>Price</dt><dd>€25</dd></div>
-              <div><dt>Servings</dt><dd>~20</dd></div>
-              <div><dt>Ship from</dt><dd>Tallinn, Estonia</dd></div>
-              <div><dt>Timing</dt><dd>When the carton is ready</dd></div>
-            </dl>
-            <a class="btn btn-accent" data-buy href="#buy">Buy — €25</a>
-            <p class="hero-note" style="margin-top: 1rem;">Full refund if we cannot ship. You will enter your address on Stripe.</p>
-          </aside>
+          <div class="offers">
+            <article class="offer">
+              <p class="offer-tag">One-time</p>
+              <p class="eyebrow">Single box</p>
+              <p class="price">€25</p>
+              <ul>
+                <li>One founding box, paid once</li>
+                <li>Ships from Tallinn when the first carton is ready — target 4–6 weeks</li>
+                <li>Full refund if we cannot ship</li>
+              </ul>
+              <a class="btn btn-ghost" data-buy="one-time" href="#buy">Buy once — €25</a>
+            </article>
+            <article class="offer offer-featured">
+              <p class="offer-tag">Subscribe &amp; save</p>
+              <p class="eyebrow">Monthly</p>
+              <p class="price">€23 <span class="unit">/ month</span></p>
+              <ul>
+                <li>Same founding box, billed monthly</li>
+                <li>First box ships with the founding carton — not from a warehouse</li>
+                <li>Later boxes only after stock is flowing. Full refund if the first box cannot ship</li>
+              </ul>
+              <a class="btn btn-accent" data-buy="subscription" href="#buy">Subscribe — €23 / mo</a>
+            </article>
+          </div>
         </div>
       </section>
     </div>
@@ -470,11 +506,15 @@
         <div class="faq">
           <details>
             <summary>When does it ship?</summary>
-            <p>From Tallinn, Estonia, when the first carton is ready. We are targeting within four to six weeks of your order. This is not next-day stock.</p>
+            <p>From Tallinn, Estonia, when the first carton is ready. We are targeting within four to six weeks of your order. This is not next-day stock — one-time and first subscription boxes wait on the same carton.</p>
+          </details>
+          <details>
+            <summary>How does the monthly subscription work?</summary>
+            <p>€23 per month for the same founding box. The first box ships with founding-batch timing. Renewals go out only after stock is flowing — we are not pretending there is endless inventory. Cancel anytime in Stripe; if the first box cannot ship, you get a full refund.</p>
           </details>
           <details>
             <summary>What if you cannot ship?</summary>
-            <p>You receive a full refund. We would rather send the money back than pretend a box is on its way.</p>
+            <p>You receive a full refund on the first box we cannot send. We would rather send the money back than pretend a box is on its way.</p>
           </details>
           <details>
             <summary>Where is it packed?</summary>
@@ -502,8 +542,13 @@
   </footer>
 
   <script>
+    const links = {
+      "one-time": STRIPE_PAYMENT_LINK_ONE_TIME,
+      subscription: STRIPE_PAYMENT_LINK_SUBSCRIPTION
+    };
     document.querySelectorAll("[data-buy]").forEach((el) => {
-      el.setAttribute("href", STRIPE_PAYMENT_LINK);
+      const href = links[el.getAttribute("data-buy")];
+      if (href) el.setAttribute("href", href);
       el.setAttribute("rel", "noopener noreferrer");
     });
   </script>
