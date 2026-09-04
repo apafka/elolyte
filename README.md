@@ -10,13 +10,14 @@ This is the **founding-batch buy page**: magnesium-first electrolyte powder, pac
 | | |
 |---|---|
 | Brand | Elolyte |
-| Offer | Founding batch of **50** numbered boxes |
-| One-time | **€25** for one founding box (**20 servings**) |
-| Subscribe & save | **€23 / month** for the same box |
+| Offer | Founding batch of **50** numbered packs |
+| One-time | **$45 USD** for one founding pack |
+| Subscribe & save | **$39 USD / month** for the same pack |
+| Pack | **30 sachets / 30 drinks** |
 | Formula | Magnesium-first electrolytes, zero / near-zero sugar, clean label. One founding formula (lemon/lime or unflavored — do not invent lab claims). |
-| Shipping | First box ships from Estonia when the first carton is ready (target **4–6 weeks** of order). Not next-day. |
+| Shipping | First pack ships from Estonia when the first carton is ready (target **4–6 weeks** of order). Not next-day. |
 | Subscription renewals | Only after stock is flowing. Not endless in-stock inventory. |
-| Refund | **Full refund if we cannot ship** the first box. |
+| Refund | **Full refund if we cannot ship** the first pack. |
 | Contact | [hello@elolyte.com](mailto:hello@elolyte.com) |
 
 ## Stripe Payment Links (required before anyone can pay)
@@ -32,21 +33,21 @@ Do **not** put Stripe secret keys on this site. Payment Links are public URLs.
 
 Until a URL is a real `buy.stripe.com` link (not a `placeholder` / `REPLACE` string), that button shows a short message and points people to `hello@elolyte.com`.
 
-### 1. One-time — €25
+### 1. One-time — $45 USD
 
 1. Open [Stripe Dashboard → Payment Links](https://dashboard.stripe.com/payment-links).
 2. Create a Payment Link.
-3. Product name: **Elolyte Founding Batch — €25**
-4. Price: **€25.00 EUR**, **one-time**.
+3. Product name: **Elolyte Founding Batch — $45**
+4. Price: **$45.00 USD**, **one-time**.
 5. Turn on **collect shipping address**.
 6. Copy the `https://buy.stripe.com/...` URL.
 7. Paste it over `STRIPE_PAYMENT_LINK_ONE_TIME` in `index.html`.
 
-### 2. Subscription — €23 / month
+### 2. Subscription — $39 USD / month
 
 1. Create a second Payment Link.
-2. Product name: **Elolyte Founding Batch — €23 / month**
-3. Price: **€23.00 EUR**, billing period **monthly** (subscription).
+2. Product name: **Elolyte Founding Batch — $39 / month**
+3. Price: **$39.00 USD**, billing period **monthly** (subscription).
 4. Turn on **collect shipping address**.
 5. Copy the `https://buy.stripe.com/...` URL.
 6. Paste it over `STRIPE_PAYMENT_LINK_SUBSCRIPTION` in `index.html`.
@@ -58,7 +59,7 @@ Push both pasted URLs to `main`. GitHub Pages will pick them up.
 - No fake waitlist counts (“47 founders”, “53 spots”).
 - No fake testimonials or initials.
 - No “in stock / ships tomorrow.”
-- Subscription: first box uses founding-batch timing; renewals only after stock is flowing.
+- Subscription: first pack uses founding-batch timing; renewals only after stock is flowing.
 - No disease claims. Soft copy only (“clean electrolytes for daily work”). EU food-supplement caution stays on the page.
 - Do not invent “12 electrolytes” or milligrams until the supplier formula is locked.
 
