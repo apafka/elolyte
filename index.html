@@ -17,7 +17,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script>
-  /* Stripe Payment Links — paste live buy.stripe.com URLs here. No secret keys. */
+  /* Stripe Payment Links — paste live buy.stripe.com URLs here. No secret keys.
+     STRIPE_PAYMENT_LINK_ONE_TIME        → one-time $45 founding pack (list price)
+     STRIPE_PAYMENT_LINK_SUBSCRIPTION    → monthly $39 founding pack (list price)
+     Until real URLs replace these placeholders, Buy / Subscribe stay on this page. */
   const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";
   const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription";
 </script>
@@ -336,6 +339,41 @@
   }
   .offer-featured ul { color: #D5DDD6; }
   .offer .btn { width: 100%; margin-top: auto; }
+  .list-price {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.15rem;
+  }
+  .offer-featured .list-price { color: #C4D0C6; }
+  .code-note {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 1.5rem;
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 1.15rem 1.4rem;
+    margin-bottom: 1.75rem;
+  }
+  .code-note p { color: var(--muted); max-width: 48ch; font-size: 0.95rem; }
+  .code-note strong { color: var(--ink); font-weight: 600; }
+  .code-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px dashed var(--gold);
+    background: var(--ivory);
+    color: var(--forest);
+    padding: 0.55rem 0.9rem;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+  .code-pill span { color: var(--gold); letter-spacing: 0.12em; font-weight: 500; }
 
   .faq { display: grid; border-top: 1px solid var(--line); }
   details { border-bottom: 1px solid var(--line); padding: 1.4rem 0; }
@@ -435,7 +473,7 @@
           <a class="btn" href="#buy">Shop the pack</a>
           <a class="btn btn-ghost" href="#buy">One-time $45 or $39 / mo</a>
         </div>
-        <p class="hero-note">First pack ships from Estonia when the first carton is ready. Full refund if we cannot ship.</p>
+        <p class="hero-note">First pack ships from Estonia when the first carton is ready. Full refund if we cannot ship. Founding 20: use code <strong>50</strong> for 50% off.</p>
         <div class="chips" aria-label="Product facts">
           <span class="chip">Magnesium-first</span>
           <span class="chip">30 sachets / 30 drinks</span>
@@ -544,28 +582,36 @@
           <div class="section-head">
             <p class="eyebrow">Founding pack</p>
             <h2 class="display">One pack. Two ways.</h2>
-            <p class="muted">Same pack: 30 sachets, 30 drinks. Prices in USD. Choose once, or subscribe and save. Shipping address on Stripe.</p>
+            <p class="muted">Same pack: 30 sachets, 30 drinks. List prices in USD. Choose once, or subscribe and save. Shipping address on Stripe.</p>
+          </div>
+          <div class="code-note">
+            <p><strong>Founding 20: use code 50 for 50% off.</strong> First twenty orders. Enter <strong>50</strong> at checkout. List prices stay $45 once or $39 / month — we are not counting down spots on this page.</p>
+            <p class="code-pill" aria-label="Discount code 50"><span>Code</span> 50</p>
           </div>
           <div class="offers">
             <article class="offer">
               <p class="offer-tag">One-time</p>
               <p class="eyebrow">Single pack</p>
+              <p class="list-price">List price</p>
               <p class="price">$45</p>
               <ul>
                 <li>One founding pack, paid once — 30 sachets / 30 drinks</li>
                 <li>Ships from Tallinn when the first carton is ready — target 4–6 weeks</li>
                 <li>Full refund if we cannot ship</li>
+                <li>Founding 20: use code 50 for 50% off</li>
               </ul>
               <a class="btn btn-ghost" data-buy="one-time" href="#buy">Buy once — $45</a>
             </article>
             <article class="offer offer-featured">
               <p class="offer-tag">Subscribe &amp; save</p>
               <p class="eyebrow">Monthly</p>
+              <p class="list-price">List price</p>
               <p class="price">$39 <span class="unit">/ month</span></p>
               <ul>
                 <li>Same founding pack, billed monthly — 30 sachets / 30 drinks</li>
                 <li>First pack ships with the founding carton — not from a warehouse</li>
                 <li>Renewals only after stock is flowing. Full refund if the first pack cannot ship</li>
+                <li>Founding 20: use code 50 for 50% off</li>
               </ul>
               <a class="btn btn-ivory" data-buy="subscription" href="#buy">Subscribe — $39 / mo</a>
             </article>
@@ -582,6 +628,10 @@
           <p class="muted">If something is still being decided (exact flavor, exact milligrams), we say so.</p>
         </div>
         <div class="faq">
+          <details>
+            <summary>What is code 50?</summary>
+            <p>The first 20 orders get 50% off with discount code <strong>50</strong>. Enter it at checkout. List prices stay $45 once or $39 / month. We do not show a live remaining-spots counter on this page.</p>
+          </details>
           <details>
             <summary>When does it ship?</summary>
             <p>When the first carton is ready, from Estonia. Target within 4–6 weeks of your order. One-time and first subscription packs wait on the same carton. Not next-day stock.</p>
