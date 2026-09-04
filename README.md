@@ -11,9 +11,10 @@ This is the **founding-batch buy page**: magnesium-first electrolyte powder, pac
 |---|---|
 | Brand | Elolyte |
 | Offer | Founding batch of **50** numbered packs |
-| One-time | **$45 USD** for one founding pack |
-| Subscribe & save | **$39 USD / month** for the same pack |
+| One-time | **$45 USD** list price for one founding pack |
+| Subscribe & save | **$39 USD / month** list price for the same pack |
 | Pack | **30 sachets / 30 drinks** |
+| Founding 20 | First 20 orders: discount code **50** for 50% off. No fake remaining-spot counters on the page. |
 | Formula | Magnesium-first electrolytes, zero / near-zero sugar, clean label. One founding formula (lemon/lime or unflavored — do not invent lab claims). |
 | Shipping | First pack ships from Estonia when the first carton is ready (target **4–6 weeks** of order). Not next-day. |
 | Subscription renewals | Only after stock is flowing. Not endless in-stock inventory. |
@@ -25,8 +26,8 @@ This is the **founding-batch buy page**: magnesium-first electrolyte powder, pac
 Buy buttons read two constants at the top of `index.html`:
 
 ```js
-const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";
-const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription";
+const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";         // $45 one-time
+const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription"; // $39 / month
 ```
 
 Do **not** put Stripe secret keys on this site. Payment Links are public URLs.
