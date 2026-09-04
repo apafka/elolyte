@@ -13,6 +13,10 @@
 <meta property="og:description" content="Magnesium-first clean hydration in sachets. $39 / month or $45 once. 30 sachets. Ships from Estonia when ready.">
 <meta property="og:url" content="https://elolyte.com/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://elolyte.com/assets/product-hero.jpg">
+<meta property="og:image:alt" content="Elolyte citrus electrolyte drink mix sachet beside a glass of lemon water">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://elolyte.com/assets/product-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -174,33 +178,21 @@
   }
 
   .still {
-    background:
-      radial-gradient(120% 80% at 50% 18%, #F3E8D4 0%, var(--honey) 55%, #DCCFB8 100%);
+    background: var(--honey);
     border: 1px solid var(--line);
     min-height: 540px;
-    display: grid;
-    place-items: center;
-    padding: 3.8rem 2rem 4.2rem;
+    height: min(72svh, 720px);
     position: relative;
+    overflow: hidden;
   }
-  .still-mark, .still-foot {
-    position: absolute;
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--sage);
-  }
-  .still-mark { top: 1.35rem; left: 1.35rem; }
-  .still-foot { bottom: 1.35rem; left: 1.35rem; right: 1.35rem; }
-  .still-stage {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 1.1rem;
+  .hero-photo {
     width: 100%;
+    height: 100%;
+    min-height: 540px;
+    object-fit: cover;
+    object-position: 58% 46%;
+    max-width: none;
   }
-  .pouch { width: min(200px, 52%); filter: drop-shadow(0 28px 36px rgba(30, 51, 41, 0.18)); }
-  .sachet { width: min(86px, 24%); filter: drop-shadow(0 16px 20px rgba(30, 51, 41, 0.14)); transform: rotate(8deg) translateY(-8px); }
 
   .trust {
     border-top: 1px solid var(--line);
@@ -470,7 +462,8 @@
     .wrap { width: min(1120px, calc(100% - 2rem)); }
     .hero, .batch, .offers, .split, .trust-row, .benefits, .ritual { grid-template-columns: 1fr; }
     .hero { gap: 2.25rem; padding: 2.6rem 0 3.4rem; min-height: unset; }
-    .still { min-height: 400px; }
+    .still { min-height: 420px; height: min(70svh, 560px); }
+    .hero-photo { min-height: 420px; }
     .panel + .panel { border-left: 0; border-top: 1px solid var(--line); }
     .benefit { border-right: 0; border-bottom: 1px solid var(--line); }
     .benefit:last-child { border-bottom: 0; }
@@ -485,7 +478,6 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn { transition: none; }
-    .sachet { transform: none; }
   }
 </style>
 </head>
@@ -523,29 +515,13 @@
           <span class="chip">Clean label</span>
         </div>
       </div>
-      <aside class="still" aria-hidden="true">
-        <span class="still-mark">30 sachets · one pack</span>
-        <div class="still-stage">
-          <svg class="pouch" viewBox="0 0 220 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M44 48c0-8 18-16 66-16s66 8 66 16v268c0 14-18 24-66 24s-66-10-66-24V48z" fill="#1E3329"/>
-            <path d="M50 78h120v168H50z" fill="#F7F2E9"/>
-            <text x="110" y="148" text-anchor="middle" fill="#1E3329" font-family="Georgia, serif" font-size="22">Elolyte</text>
-            <text x="110" y="172" text-anchor="middle" fill="#B8956A" font-family="Arial, sans-serif" font-size="8" letter-spacing="2.2">MAGNESIUM-FIRST</text>
-            <text x="110" y="198" text-anchor="middle" fill="#6E7F70" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.4">30 SACHETS · TALLINN</text>
-            <path d="M44 48c0-8 18-16 66-16s66 8 66 16c0 7-18 13-66 13S44 55 44 48z" fill="#2A4538"/>
-            <ellipse cx="110" cy="46" rx="28" ry="6" fill="#E8DCC8" opacity=".35"/>
-            <path d="M50 246h120v8H50z" fill="#B8956A" opacity=".35"/>
-          </svg>
-          <svg class="sachet" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 22h84v150c0 10-12 16-42 16s-42-6-42-16V22z" fill="#2A4538"/>
-            <path d="M24 48h72v88H24z" fill="#F7F2E9"/>
-            <text x="60" y="92" text-anchor="middle" fill="#1E3329" font-family="Georgia, serif" font-size="13">1</text>
-            <text x="60" y="110" text-anchor="middle" fill="#B8956A" font-family="Arial, sans-serif" font-size="6" letter-spacing="1.6">SACHET</text>
-            <path d="M18 22h84v14H18z" fill="#1E3329"/>
-            <path d="M22 18h16l6 10H18l4-10z" fill="#E8DCC8"/>
-          </svg>
-        </div>
-        <p class="still-foot">Rip. Stir. Desk. · Tallinn, Estonia</p>
+      <aside class="still">
+        <img
+          class="hero-photo"
+          src="assets/product-hero.jpg"
+          width="1024"
+          height="1536"
+          alt="Elolyte citrus electrolyte drink mix sachet standing beside a glass of lemon water">
       </aside>
     </div>
 
