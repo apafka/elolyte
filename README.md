@@ -26,8 +26,8 @@ This is the **founding-batch buy page**: magnesium-first electrolyte powder, pac
 Buy buttons read two constants at the top of `index.html`:
 
 ```js
-const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";
-const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription";
+const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/test_placeholder_one_time";         // $45 one-time
+const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription"; // $39 / month
 ```
 
 Do **not** put Stripe secret keys on this site. Payment Links are public URLs.
