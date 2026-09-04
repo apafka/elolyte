@@ -27,7 +27,7 @@ Buy buttons read two constants at the top of `index.html`:
 
 ```js
 const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/00w5kD0QQ8vf5tu78K6kg01";            // $45 one-time — live
-const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/test_placeholder_subscription"; // $39 / month — still a placeholder
+const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/00w9ATeHGcLve000Km6kg00";        // $39 / month — live
 ```
 
 Do **not** put Stripe secret keys on this site. Payment Links are public URLs.
