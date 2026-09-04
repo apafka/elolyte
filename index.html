@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elolyte — Magnesium-first clean hydration. Founding batch of 50.</title>
-<meta name="description" content="Elolyte is a magnesium-first electrolyte drink mix. Founding batch of 50 packs, packed in Tallinn. $45 once or $39 / month. 30 sachets per pack. Ships when the first carton is ready.">
+<title>Elolyte — Daily hydration you’ll actually want. Founding batch.</title>
+<meta name="description" content="Magnesium-first electrolyte drink mix in sachets. A daily desk ritual — taste-clean, no junk. $39 / month or try once at $45. 30 sachets. Founding batch from Tallinn. Full refund if we cannot ship.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#F7F2E9">
 <link rel="canonical" href="https://elolyte.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Elolyte — Founding batch">
-<meta property="og:description" content="Magnesium-first clean hydration. 50 numbered packs from Tallinn. $45 once or $39 / month. 30 sachets per pack.">
+<meta property="og:title" content="Elolyte — Daily hydration you’ll actually want">
+<meta property="og:description" content="Magnesium-first clean hydration in sachets. $39 / month or $45 once. 30 sachets. Founding batch from Tallinn.">
 <meta property="og:url" content="https://elolyte.com/">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,8 +85,6 @@
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
   .btn:hover { background: var(--forest-mid); border-color: var(--forest-mid); }
-  .btn-ink { background: var(--ink); border-color: var(--ink); }
-  .btn-ink:hover { background: #1a1816; border-color: #1a1816; }
   .btn-ghost {
     background: transparent;
     color: var(--ink);
@@ -139,30 +137,31 @@
 
   .hero {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.08fr 0.92fr;
     gap: 4.5rem;
     align-items: center;
     min-height: calc(100svh - 72px);
     padding: 5rem 0 5.5rem;
   }
   .hero h1 {
-    font-size: clamp(3.2rem, 6.6vw, 5.6rem);
-    margin: 1.2rem 0 1.35rem;
-    max-width: 12ch;
+    font-size: clamp(3.1rem, 6.4vw, 5.4rem);
+    margin: 1.15rem 0 1.3rem;
+    max-width: 13ch;
   }
   .hero h1 em {
     font-style: italic;
     font-weight: 400;
     color: var(--forest);
   }
-  .hero-lead { max-width: 38ch; color: var(--muted); margin-bottom: 1.85rem; }
+  .hero-lead { max-width: 40ch; color: var(--muted); margin-bottom: 1.85rem; }
   .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1rem; }
-  .hero-note { margin-top: 1.15rem; font-size: 0.88rem; color: var(--muted); max-width: 38ch; }
+  .hero-note { margin-top: 1.2rem; font-size: 0.9rem; color: var(--muted); max-width: 42ch; }
+  .hero-note strong { color: var(--ink); font-weight: 600; }
   .chips {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1.6rem;
+    margin-top: 1.55rem;
   }
   .chip {
     border: 1px solid var(--line);
@@ -181,7 +180,7 @@
     min-height: 540px;
     display: grid;
     place-items: center;
-    padding: 3.5rem 2rem;
+    padding: 3.8rem 2rem 4.2rem;
     position: relative;
   }
   .still-mark, .still-foot {
@@ -193,7 +192,15 @@
   }
   .still-mark { top: 1.35rem; left: 1.35rem; }
   .still-foot { bottom: 1.35rem; left: 1.35rem; right: 1.35rem; }
-  .pouch { width: min(220px, 62%); filter: drop-shadow(0 28px 36px rgba(30, 51, 41, 0.18)); }
+  .still-stage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1.1rem;
+    width: 100%;
+  }
+  .pouch { width: min(200px, 52%); filter: drop-shadow(0 28px 36px rgba(30, 51, 41, 0.18)); }
+  .sachet { width: min(86px, 24%); filter: drop-shadow(0 16px 20px rgba(30, 51, 41, 0.14)); transform: rotate(8deg) translateY(-8px); }
 
   .trust {
     border-top: 1px solid var(--line);
@@ -222,8 +229,52 @@
   }
 
   section { padding: 5.75rem 0; }
-  .section-head { max-width: 40rem; margin-bottom: 2.8rem; }
+  .section-head { max-width: 42rem; margin-bottom: 2.8rem; }
   .section-head h2 { font-size: clamp(2.3rem, 4.2vw, 3.5rem); margin: 0.75rem 0 0.9rem; }
+
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line);
+    background: var(--card);
+  }
+  .benefit {
+    padding: 2.2rem 2rem 2.1rem;
+    border-right: 1px solid var(--line);
+  }
+  .benefit:last-child { border-right: 0; }
+  .benefit h3 {
+    font-family: Fraunces, Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 500;
+    margin: 0.55rem 0 0.75rem;
+  }
+  .benefit p { color: var(--muted); font-size: 0.98rem; }
+
+  .ritual {
+    margin-top: 1.25rem;
+    background: var(--forest);
+    color: var(--ivory);
+    padding: 2.3rem 2.2rem 2.15rem;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  .ritual h3 {
+    font-family: Fraunces, Georgia, serif;
+    font-size: clamp(2rem, 3.4vw, 2.7rem);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: 0.45rem 0 0.7rem;
+  }
+  .ritual h3 em { font-style: italic; font-weight: 400; color: #D4B48A; }
+  .ritual > div > p { color: #D5DDD6; max-width: 36ch; }
+  .steps { display: grid; gap: 1.05rem; }
+  .step { display: grid; grid-template-columns: 2.3rem 1fr; gap: 0.85rem; }
+  .step-n { font-size: 0.7rem; letter-spacing: 0.16em; color: #D4B48A; padding-top: 0.3rem; font-weight: 600; }
+  .step h4 { font-size: 1.02rem; font-weight: 600; margin-bottom: 0.12rem; }
+  .step p { color: #C4D0C6; font-size: 0.94rem; }
 
   .split { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); background: var(--card); }
   .panel { padding: 2.5rem 2.3rem; }
@@ -291,7 +342,12 @@
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
-  .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .offers {
+    display: grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
   .offer {
     background: var(--card);
     border: 1px solid var(--line);
@@ -303,6 +359,7 @@
     background: var(--forest);
     color: var(--ivory);
     border-color: var(--forest);
+    padding: 2.4rem 2.15rem 2.1rem;
   }
   .offer-featured .eyebrow { color: #D4B48A; }
   .offer-tag {
@@ -316,11 +373,12 @@
   .offer-featured .offer-tag { color: #C4D0C6; }
   .offer .price {
     font-family: Fraunces, Georgia, serif;
-    font-size: clamp(3.4rem, 6vw, 4.5rem);
+    font-size: clamp(3.4rem, 6vw, 4.7rem);
     line-height: 0.88;
     font-weight: 500;
     margin: 0.3rem 0;
   }
+  .offer-try .price { font-size: clamp(2.8rem, 5vw, 3.6rem); }
   .offer .unit {
     font-family: "Source Sans 3", system-ui, sans-serif;
     font-size: 1rem;
@@ -374,6 +432,13 @@
     white-space: nowrap;
   }
   .code-pill span { color: var(--gold); letter-spacing: 0.12em; font-weight: 500; }
+  .risk-line {
+    margin-top: 1.4rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+    max-width: 62ch;
+  }
+  .risk-line strong { color: var(--ink); font-weight: 600; }
 
   .faq { display: grid; border-top: 1px solid var(--line); }
   details { border-bottom: 1px solid var(--line); padding: 1.4rem 0; }
@@ -403,10 +468,23 @@
     color: var(--ivory);
     padding: 4.5rem 0;
   }
-  .guarantee .wrap { max-width: 40rem; text-align: center; }
+  .guarantee .wrap { max-width: 44rem; text-align: center; }
   .guarantee .eyebrow { color: #D4B48A; }
   .guarantee h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin: 0.8rem 0 1rem; }
   .guarantee p { color: #D5DDD6; }
+  .guarantee-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.35rem;
+    border: 1px dashed #D4B48A;
+    color: var(--ivory);
+    padding: 0.5rem 0.85rem;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+  .guarantee-code span { color: #D4B48A; letter-spacing: 0.12em; font-weight: 500; }
 
   footer {
     padding: 2.5rem 0 3.1rem;
@@ -430,20 +508,24 @@
     .nav-links { display: none; }
     #nav-buy-mobile { display: inline-flex; }
     .wrap { width: min(1120px, calc(100% - 2rem)); }
-    .hero, .batch, .offers, .split, .trust-row { grid-template-columns: 1fr; }
+    .hero, .batch, .offers, .split, .trust-row, .benefits, .ritual { grid-template-columns: 1fr; }
     .hero { gap: 2.25rem; padding: 2.6rem 0 3.4rem; min-height: unset; }
     .still { min-height: 400px; }
     .panel + .panel { border-left: 0; border-top: 1px solid var(--line); }
+    .benefit { border-right: 0; border-bottom: 1px solid var(--line); }
+    .benefit:last-child { border-bottom: 0; }
     .trust-item { border-right: 0; border-bottom: 1px solid var(--line); padding: 0.85rem 0; }
     .trust-item:last-child { border-bottom: 0; }
     section { padding: 3.8rem 0; }
     .caution { padding-bottom: 2.5rem; }
     details p { padding-right: 0; }
     .guarantee { padding: 3.4rem 0; }
+    .ritual { padding: 2rem 1.5rem; gap: 1.6rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .btn { transition: none; }
+    .sachet { transform: none; }
   }
 </style>
 </head>
@@ -453,57 +535,125 @@
       <a class="logo" href="#top">Elolyte</a>
       <nav aria-label="Primary">
         <ul class="nav-links">
+          <li><a href="#habit">The habit</a></li>
           <li><a href="#formula">Formula</a></li>
           <li><a href="#batch">The batch</a></li>
           <li><a href="#faq">Questions</a></li>
-          <li><a class="btn nav-buy" href="#buy">Shop the pack</a></li>
+          <li><a class="btn nav-buy" href="#buy">Subscribe — $39</a></li>
         </ul>
       </nav>
-      <a class="btn nav-buy" href="#buy" id="nav-buy-mobile">Shop</a>
+      <a class="btn nav-buy" href="#buy" id="nav-buy-mobile">Subscribe — $39</a>
     </div>
   </header>
 
   <main id="top">
     <div class="wrap hero">
       <div>
-        <p class="eyebrow">Founding batch · Tallinn</p>
-        <h1 class="display">Magnesium-first <em>hydration.</em></h1>
-        <p class="hero-lead">A clean electrolyte powder for people who read labels. One founding formula. Fifty numbered packs, packed by Alan in Tallinn. No waitlist theatre.</p>
+        <p class="eyebrow">Founding batch · Tallinn · 30 sachets</p>
+        <h1 class="display">Daily hydration <em>you’ll actually want.</em></h1>
+        <p class="hero-lead">Rip a sachet. Stir. Desk. Magnesium-first electrolytes for deep-work days — taste-clean, no junk, no sports-drink theatre. One founding formula, packed by Alan in Tallinn.</p>
         <div class="hero-actions">
-          <a class="btn" href="#buy">Shop the pack</a>
-          <a class="btn btn-ghost" href="#buy">One-time $45 or $39 / mo</a>
+          <a class="btn" href="#subscribe">Subscribe — $39 / mo</a>
+          <a class="btn btn-ghost" href="#try-once">Try once — $45</a>
         </div>
-        <p class="hero-note">First pack ships from Estonia when the first carton is ready. Full refund if we cannot ship. Founding 20: use code <strong>50</strong> for 50% off.</p>
+        <p class="hero-note">Founding batch ships when the carton is ready — target 4–6 weeks from Tallinn. <strong>Full refund if we cannot ship.</strong> First 20: use code <strong>50</strong> for 50% off.</p>
         <div class="chips" aria-label="Product facts">
-          <span class="chip">Magnesium-first</span>
           <span class="chip">30 sachets / 30 drinks</span>
+          <span class="chip">Magnesium-first</span>
           <span class="chip">Clean label</span>
         </div>
       </div>
       <aside class="still" aria-hidden="true">
-        <span class="still-mark">01 / 50</span>
-        <svg class="pouch" viewBox="0 0 220 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M44 48c0-8 18-16 66-16s66 8 66 16v268c0 14-18 24-66 24s-66-10-66-24V48z" fill="#1E3329"/>
-          <path d="M50 78h120v168H50z" fill="#F7F2E9"/>
-          <text x="110" y="148" text-anchor="middle" fill="#1E3329" font-family="Georgia, serif" font-size="22">Elolyte</text>
-          <text x="110" y="172" text-anchor="middle" fill="#B8956A" font-family="Arial, sans-serif" font-size="8" letter-spacing="2.2">MAGNESIUM-FIRST</text>
-          <text x="110" y="198" text-anchor="middle" fill="#6E7F70" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.4">30 SACHETS · TALLINN</text>
-          <path d="M44 48c0-8 18-16 66-16s66 8 66 16c0 7-18 13-66 13S44 55 44 48z" fill="#2A4538"/>
-          <ellipse cx="110" cy="46" rx="28" ry="6" fill="#E8DCC8" opacity=".35"/>
-          <path d="M50 246h120v8H50z" fill="#B8956A" opacity=".35"/>
-        </svg>
-        <p class="still-foot">Founding formula · Packed by Alan</p>
+        <span class="still-mark">30 sachets · one pack</span>
+        <div class="still-stage">
+          <svg class="pouch" viewBox="0 0 220 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M44 48c0-8 18-16 66-16s66 8 66 16v268c0 14-18 24-66 24s-66-10-66-24V48z" fill="#1E3329"/>
+            <path d="M50 78h120v168H50z" fill="#F7F2E9"/>
+            <text x="110" y="148" text-anchor="middle" fill="#1E3329" font-family="Georgia, serif" font-size="22">Elolyte</text>
+            <text x="110" y="172" text-anchor="middle" fill="#B8956A" font-family="Arial, sans-serif" font-size="8" letter-spacing="2.2">MAGNESIUM-FIRST</text>
+            <text x="110" y="198" text-anchor="middle" fill="#6E7F70" font-family="Arial, sans-serif" font-size="7" letter-spacing="1.4">30 SACHETS · TALLINN</text>
+            <path d="M44 48c0-8 18-16 66-16s66 8 66 16c0 7-18 13-66 13S44 55 44 48z" fill="#2A4538"/>
+            <ellipse cx="110" cy="46" rx="28" ry="6" fill="#E8DCC8" opacity=".35"/>
+            <path d="M50 246h120v8H50z" fill="#B8956A" opacity=".35"/>
+          </svg>
+          <svg class="sachet" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 22h84v150c0 10-12 16-42 16s-42-6-42-16V22z" fill="#2A4538"/>
+            <path d="M24 48h72v88H24z" fill="#F7F2E9"/>
+            <text x="60" y="92" text-anchor="middle" fill="#1E3329" font-family="Georgia, serif" font-size="13">1</text>
+            <text x="60" y="110" text-anchor="middle" fill="#B8956A" font-family="Arial, sans-serif" font-size="6" letter-spacing="1.6">SACHET</text>
+            <path d="M18 22h84v14H18z" fill="#1E3329"/>
+            <path d="M22 18h16l6 10H18l4-10z" fill="#E8DCC8"/>
+          </svg>
+        </div>
+        <p class="still-foot">Rip. Stir. Desk. · Packed by Alan</p>
       </aside>
     </div>
 
     <div class="trust">
       <div class="wrap trust-row">
-        <div class="trust-item"><strong>30 sachets</strong> Thirty drinks in every pack</div>
-        <div class="trust-item"><strong>Ships from Tallinn</strong> When the first carton is ready</div>
-        <div class="trust-item"><strong>Full refund</strong> If we cannot ship the first pack</div>
-        <div class="trust-item"><strong>Food supplement</strong> Not medicine. No disease claims.</div>
+        <div class="trust-item"><strong>30 sachets</strong> One pack. Thirty desk days.</div>
+        <div class="trust-item"><strong>Ships when ready</strong> Tallinn. Target 4–6 weeks.</div>
+        <div class="trust-item"><strong>Full refund</strong> If we cannot ship the first pack.</div>
+        <div class="trust-item"><strong>Code 50</strong> First 20 orders, 50% off.</div>
       </div>
     </div>
+
+    <section id="habit">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Taste-clean · Easy · Daily</p>
+          <h2 class="display">We made the daily drink, honestly, easy.</h2>
+          <p class="muted">A habit you keep, not a bottle you abandon. Ours is a sachet, not a gummy: rip it open, stir, get back to the desk. You’ll actually want this daily — or we have the wrong mix.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit">
+            <p class="eyebrow">01</p>
+            <h3>Taste-clean</h3>
+            <p>You’ll actually want this daily. Not candy. Not a neon sports punch. A clean mix for a glass at the desk.</p>
+          </article>
+          <article class="benefit">
+            <p class="eyebrow">02</p>
+            <h3>No junk</h3>
+            <p>No neon dyes. No pile of sweeteners. Zero / near-zero sugar. The label stays short on purpose.</p>
+          </article>
+          <article class="benefit">
+            <p class="eyebrow">03</p>
+            <h3>Daily</h3>
+            <p>Magnesium-first for deep-work days — not a race. Thirty sachets. That’s a month of the habit.</p>
+          </article>
+        </div>
+        <div class="ritual">
+          <div>
+            <p class="eyebrow">The desk ritual</p>
+            <h3>Rip. Stir. <em>Desk.</em></h3>
+            <p>One hero product. One pack. Thirty sachets, thirty drinks. No shaker cult. No gummy-bear routine. A sachet, water, done.</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span class="step-n">01</span>
+              <div>
+                <h4>Rip the sachet</h4>
+                <p>Tear one open. Toss the rest in a drawer. That’s the whole kit.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-n">02</span>
+              <div>
+                <h4>Stir into water</h4>
+                <p>A glass. Not a blender. Not a race bottle. Then get back to it.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-n">03</span>
+              <div>
+                <h4>Make it daily</h4>
+                <p>Thirty sachets in the pack. Subscribe if you want the habit to keep showing up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="formula">
       <div class="wrap">
@@ -568,7 +718,7 @@
               <span class="term-n">03</span>
               <div>
                 <h3>Same pack, two ways</h3>
-                <p>Thirty sachets — thirty drinks — either way: $45 once, or $39 each month (USD). Subscribe is not a warehouse on tap — the first pack waits on the founding carton; later packs go out after stock is flowing.</p>
+                <p>Thirty sachets — thirty drinks — either way: $39 each month, or $45 once (USD). Subscribe is the daily plan. Try once if you want a single carton first. The first pack still waits on the founding carton; later packs go out after stock is flowing.</p>
               </div>
             </div>
           </div>
@@ -580,30 +730,17 @@
       <section>
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow">Founding pack</p>
-            <h2 class="display">One pack. Two ways.</h2>
-            <p class="muted">Same pack: 30 sachets, 30 drinks. List prices in USD. Choose once, or subscribe and save. Shipping address on Stripe.</p>
+            <p class="eyebrow">Founding pack · 30 sachets</p>
+            <h2 class="display">Start the habit.</h2>
+            <p class="muted">One product. Same pack either way: 30 sachets, 30 drinks. Subscribe is the daily plan. Try once if you want a single carton first. List prices in USD. Shipping address on Stripe.</p>
           </div>
           <div class="code-note">
-            <p><strong>Founding 20: use code 50 for 50% off.</strong> First twenty orders. Enter <strong>50</strong> at checkout. List prices stay $45 once or $39 / month — we are not counting down spots on this page.</p>
+            <p><strong>Founding 20: use code 50 for 50% off.</strong> First twenty orders. Enter <strong>50</strong> at checkout. List prices stay $39 / month or $45 once — we are not counting down spots on this page.</p>
             <p class="code-pill" aria-label="Discount code 50"><span>Code</span> 50</p>
           </div>
           <div class="offers">
-            <article class="offer">
-              <p class="offer-tag">One-time</p>
-              <p class="eyebrow">Single pack</p>
-              <p class="list-price">List price</p>
-              <p class="price">$45</p>
-              <ul>
-                <li>One founding pack, paid once — 30 sachets / 30 drinks</li>
-                <li>Ships from Tallinn when the first carton is ready — target 4–6 weeks</li>
-                <li>Full refund if we cannot ship</li>
-                <li>Founding 20: use code 50 for 50% off</li>
-              </ul>
-              <a class="btn btn-ghost" data-buy="one-time" href="#buy">Buy once — $45</a>
-            </article>
-            <article class="offer offer-featured">
-              <p class="offer-tag">Subscribe &amp; save</p>
+            <article class="offer offer-featured" id="subscribe">
+              <p class="offer-tag">The daily habit</p>
               <p class="eyebrow">Monthly</p>
               <p class="list-price">List price</p>
               <p class="price">$39 <span class="unit">/ month</span></p>
@@ -615,7 +752,21 @@
               </ul>
               <a class="btn btn-ivory" data-buy="subscription" href="#buy">Subscribe — $39 / mo</a>
             </article>
+            <article class="offer offer-try" id="try-once">
+              <p class="offer-tag">Try once</p>
+              <p class="eyebrow">One-time</p>
+              <p class="list-price">List price</p>
+              <p class="price">$45</p>
+              <ul>
+                <li>One founding pack, paid once — 30 sachets / 30 drinks</li>
+                <li>Ships from Tallinn when the first carton is ready — target 4–6 weeks</li>
+                <li>Full refund if we cannot ship</li>
+                <li>Founding 20: use code 50 for 50% off</li>
+              </ul>
+              <a class="btn btn-ghost" data-buy="one-time" href="#buy">Try once — $45</a>
+            </article>
           </div>
+          <p class="risk-line"><strong>Risk, reversed.</strong> Founding batch ships when ready — target 4–6 weeks from Tallinn. Full refund if we cannot ship. First 20: code <strong>50</strong> for 50% off at checkout.</p>
         </div>
       </section>
     </div>
@@ -630,7 +781,11 @@
         <div class="faq">
           <details>
             <summary>What is code 50?</summary>
-            <p>The first 20 orders get 50% off with discount code <strong>50</strong>. Enter it at checkout. List prices stay $45 once or $39 / month. We do not show a live remaining-spots counter on this page.</p>
+            <p>The first 20 orders get 50% off with discount code <strong>50</strong>. Enter it at checkout. List prices stay $39 / month or $45 once. We do not show a live remaining-spots counter on this page.</p>
+          </details>
+          <details>
+            <summary>Is this a gummy?</summary>
+            <p>No. Elolyte is an electrolyte powder in sachets. Rip one open, stir into water, drink. Thirty sachets in the pack — not a handful of bears.</p>
           </details>
           <details>
             <summary>When does it ship?</summary>
@@ -665,7 +820,8 @@
     <div class="wrap">
       <p class="eyebrow">If the carton does not happen</p>
       <h2 class="display">Full refund if we cannot ship.</h2>
-      <p>You are buying a founding pack, not a warehouse promise. If the first carton cannot leave Tallinn, the money comes back. That is the only guarantee that matters at this stage.</p>
+      <p>Founding batch ships when the carton is ready — target 4–6 weeks from Tallinn. If that carton cannot leave, the money comes back. First twenty orders: use code <strong>50</strong> for 50% off at checkout.</p>
+      <p class="guarantee-code" aria-label="Discount code 50"><span>Code</span> 50</p>
     </div>
   </aside>
 

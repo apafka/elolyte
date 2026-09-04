@@ -3,7 +3,9 @@
 GitHub Pages source for **[https://elolyte.com](https://elolyte.com)** (`CNAME` → `elolyte.com`).  
 Public repo: [apafka/elolyte](https://github.com/apafka/elolyte). Pages builds from `main` (`/`).
 
-This is the **founding-batch buy page**: magnesium-first electrolyte powder, packed by Alan Pafka in Tallinn, Estonia.
+This is the **founding-batch buy page**: magnesium-first electrolyte powder in sachets, packed by Alan Pafka in Tallinn, Estonia.
+
+Page shape (steal the *habit* from daily-nutrition brands, not the gummy): subscription-first ($39 / month is the primary CTA; $45 is “try once”), a Taste-clean / No junk / Daily stack, rip-open desk ritual, and risk reversal next to checkout. Still one product: **30 sachets**.
 
 ## Product (locked until Alan changes it)
 
@@ -58,11 +60,12 @@ Push both pasted URLs to `main`. GitHub Pages will pick them up.
 ## Honesty rules (keep these)
 
 - No fake waitlist counts (“47 founders”, “53 spots”).
-- No fake testimonials or initials.
+- No fake testimonials, star ratings, or “1M members” social proof.
 - No “in stock / ships tomorrow.”
 - Subscription: first pack uses founding-batch timing; renewals only after stock is flowing.
 - No disease claims. Soft copy only (“clean electrolytes for daily work”). EU food-supplement caution stays on the page.
 - Do not invent “12 electrolytes” or milligrams until the supplier formula is locked.
+- Not a gummy brand. Sachets, desk ritual, premium forest/cream/gold — warmer voice, not cartoonish.
 
 ## Edit & deploy
 
