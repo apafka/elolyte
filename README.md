@@ -3,7 +3,7 @@
 GitHub Pages source for **[https://elolyte.com](https://elolyte.com)** (`CNAME` → `elolyte.com`).  
 Public repo: [apafka/elolyte](https://github.com/apafka/elolyte). Pages builds from `main` (`/`).
 
-Two-page static site: a hero landing with six flavor products plus Subscribe / Try once pricing, and a Shop Sachets offer page.
+Two-page static site: a hero landing (with Subscribe / Try once cards) plus a Shop Sachets offer page.
 
 ## Pages
 
@@ -23,7 +23,6 @@ Two-page static site: a hero landing with six flavor products plus Subscribe / T
 | Value | Subscribe **$1.3 USD per drink** ($39÷30). Try once **$1.5 USD per drink** ($45÷30). |
 | Dose | **1,000 mg sodium · 200 mg potassium · 60 mg magnesium** |
 | Sugar | No sugar |
-| Flavors | Natural Lemon, Original, Natural Lime, Natural Watermelon, Natural Cola, Tropical |
 | Contact | [hello@elolyte.com](mailto:hello@elolyte.com) |
 | Social | [X @drink_elolyte](https://x.com/drink_elolyte) · [Instagram @drink_elolyte](https://www.instagram.com/drink_elolyte/) |
 
@@ -48,7 +47,7 @@ Until a URL is a real `buy.stripe.com` link (not a `placeholder` / `REPLACE` str
 - No “in stock / ships tomorrow.”
 - No disease claims, USDA Organic claims, or “mental clarity” claims in HTML/copy. Sachet art in the hero photo may show label pixels; do not repeat those as marketing claims.
 - Food-supplement caution stays in the footer.
-- Home is hero + feature/trust row + six flavor products (no lifestyle photos) + the same Subscribe / Try once cards as shop. Shop lists the same flavors with buy buttons.
+- Home is hero + feature/trust row + the same Subscribe / Try once cards as shop. Shop stays a clean pricing page with a contact line.
 
 ## Edit & deploy
 
