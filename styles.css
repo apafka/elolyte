@@ -221,67 +221,6 @@ a { color: inherit; }
   border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
 }
 
-.flavors {
-  padding: 1.2rem 0 3.4rem;
-  border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
-}
-
-.flavor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15rem;
-}
-
-.flavor-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 1.4rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow);
-}
-
-.flavor-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: var(--sage-wash);
-}
-
-.flavor-body {
-  padding: 1.15rem 1.2rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.flavor-body h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  margin-bottom: 0.3rem;
-}
-
-.flavor-body p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.flavor-actions {
-  display: grid;
-  gap: 0.55rem;
-  margin-top: auto;
-}
-
-.flavor-actions .btn {
-  width: 100%;
-  padding: 0.85rem 1rem;
-}
-
 .contact-line {
   margin-top: 0.85rem;
   font-size: 0.95rem;
@@ -295,47 +234,6 @@ a { color: inherit; }
 }
 
 .contact-line a:hover { color: var(--orange-hot); }
-
-.shop-flavors {
-  margin-top: 2.6rem;
-}
-
-.shop-flavors h2 {
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  margin-bottom: 0.45rem;
-}
-
-.flavor-list {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.15rem;
-}
-
-.flavor-chip {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  text-decoration: none;
-  color: var(--olive);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.flavor-chip img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 0.85rem;
-  border: 1px solid var(--line);
-  background: var(--sage-wash);
-}
-
-.flavor-chip:hover { color: var(--ink); }
-.flavor-chip:hover img { border-color: var(--sage-deep); }
 
 .shop-intro {
   max-width: 40rem;
@@ -435,6 +333,21 @@ footer {
   border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
 }
 
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1.05rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+}
+
 footer a { color: var(--olive); text-underline-offset: 3px; }
 footer a:hover { color: var(--ink); }
 .fineprint a { color: var(--orange); }
@@ -451,8 +364,6 @@ footer a:hover { color: var(--ink); }
   .wrap { width: min(1180px, calc(100% - 1.6rem)); }
   .hero,
   .offers { grid-template-columns: 1fr; }
-  .flavor-grid { grid-template-columns: 1fr 1fr; }
-  .flavor-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hero {
     gap: 1.5rem;
     padding: 1.4rem 0 2.6rem;
@@ -465,11 +376,6 @@ footer a:hover { color: var(--ink); }
   .shop { padding: 2rem 0 3.2rem; }
   .nav-actions { gap: 0.7rem; }
   .nav-buy { padding: 0.62rem 0.95rem; }
-}
-
-@media (max-width: 640px) {
-  .flavor-grid { grid-template-columns: 1fr; }
-  .flavor-list { grid-template-columns: 1fr 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
