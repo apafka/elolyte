@@ -336,7 +336,7 @@ footer {
 .footer-contact {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 0.35rem 1.05rem;
   font-size: 0.92rem;
   font-weight: 600;
@@ -344,9 +344,28 @@ footer {
 
 .footer-social {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem 1rem;
+  align-items: center;
+  gap: 0.55rem;
 }
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--olive);
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.social-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: block;
+}
+
+.social-icon:hover { color: var(--ink); background: color-mix(in srgb, var(--sage-wash) 70%, transparent); }
 
 footer a { color: var(--olive); text-underline-offset: 3px; }
 footer a:hover { color: var(--ink); }

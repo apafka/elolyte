@@ -24,7 +24,7 @@ Two-page static site: a hero landing (with Subscribe / Try once cards) plus a Sh
 | Dose | **1,000 mg sodium · 200 mg potassium · 60 mg magnesium** |
 | Sugar | No sugar |
 | Contact | [hello@elolyte.com](mailto:hello@elolyte.com) |
-| Social | [X @drink_elolyte](https://x.com/drink_elolyte) · [Instagram @drink_elolyte](https://www.instagram.com/drink_elolyte/) |
+| Social | Footer icon links: [X](https://x.com/drink_elolyte) · [Instagram](https://www.instagram.com/drink_elolyte/) |
 
 ## Stripe Payment Links
 
