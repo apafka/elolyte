@@ -297,18 +297,15 @@
   }
   .life p { color: var(--muted); margin-top: 0.55rem; font-size: 0.98rem; }
 
-  .trust { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .trust-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  .trust-item h3 {
-    font-size: 1.05rem;
+  .value-bar {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+    padding: 1.15rem 0;
+    text-align: center;
     font-weight: 600;
-    margin-bottom: 0.4rem;
+    letter-spacing: 0.01em;
   }
-  .trust-item p { color: var(--muted); font-size: 0.96rem; }
 
   .buy-band { background: var(--cream); }
   .offers {
@@ -362,8 +359,6 @@
   }
   .offer-featured ul { color: #D5DDD6; }
   .offer .btn { width: 100%; margin-top: auto; }
-  .risk-line { margin-top: 1.35rem; font-size: 0.92rem; color: var(--muted); max-width: 62ch; }
-  .risk-line strong { color: var(--ink); }
 
   .finale {
     background: var(--forest);
@@ -404,7 +399,7 @@
 
   @media (max-width: 900px) {
     .wrap { width: min(1120px, calc(100% - 1.7rem)); }
-    .hero, .doses, .clean-grid, .steps, .life-grid, .trust-list, .offers { grid-template-columns: 1fr; }
+    .hero, .doses, .clean-grid, .steps, .life-grid, .offers { grid-template-columns: 1fr; }
     .hero { gap: 1.5rem; padding: 1.5rem 0 2.4rem; min-height: unset; }
     .still { min-height: 360px; height: min(54svh, 460px); }
     .hero-photo { min-height: 360px; }
@@ -440,7 +435,7 @@
           <a class="btn" href="#subscribe">Try Elolyte →</a>
           <a class="link-quiet" href="#try-once">Try once $45</a>
         </div>
-        <p class="hero-note">Subscribe $39/mo · 30 sachets</p>
+        <p class="hero-note">Subscribe $39/mo</p>
       </div>
       <aside class="still">
         <img
@@ -450,6 +445,10 @@
           height="1536"
           alt="Elolyte citrus salt electrolyte sachet standing beside a glass of lemon water">
       </aside>
+    </div>
+
+    <div class="value-bar">
+      <div class="wrap">$1.3 USD per drink, costs less than your average bottle of water</div>
     </div>
 
     <section class="problem" id="formula">
@@ -540,30 +539,6 @@
       </div>
     </section>
 
-    <section class="trust" id="trust">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Straight talk</p>
-          <h2 class="display">No fake reviews. Just the terms.</h2>
-          <p class="muted">We will not invent star ratings or quotes. When real customers write in, they go here.</p>
-        </div>
-        <div class="trust-list">
-          <article class="trust-item">
-            <h3>Ships from Estonia when ready</h3>
-            <p>Packed in Tallinn. Not a next-day warehouse story. Target 4–6 weeks on the first pack.</p>
-          </article>
-          <article class="trust-item">
-            <h3>Full refund if we cannot ship</h3>
-            <p>If the first pack cannot leave, the money comes back. That is the deal.</p>
-          </article>
-          <article class="trust-item">
-            <h3>Food supplement, not medicine</h3>
-            <p>Hydration powder. It does not diagnose, treat, or prevent disease.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <div class="buy-band" id="buy">
       <section>
         <div class="wrap">
@@ -578,9 +553,9 @@
               <p class="price">$39 <span>/ mo</span></p>
               <ul>
                 <li>30 sachets every month</li>
+                <li>$1.3 USD per drink</li>
                 <li>Same formula: 1,000 / 200 / 60</li>
                 <li>Cancel anytime in Stripe</li>
-                <li>Full refund if the first pack cannot ship</li>
               </ul>
               <a class="btn btn-cream" data-buy="subscription" href="#buy">Subscribe — $39 / mo</a>
             </article>
@@ -590,12 +565,11 @@
               <ul>
                 <li>One pack, paid once</li>
                 <li>30 sachets · 30 drinks</li>
-                <li>Full refund if we cannot ship</li>
+                <li>$1.3 USD per drink</li>
               </ul>
               <a class="btn btn-ghost" data-buy="one-time" href="#buy">Try once — $45</a>
             </article>
           </div>
-          <p class="risk-line"><strong>Ships from Estonia when ready.</strong> Full refund if we cannot ship. Food supplement, not medicine.</p>
         </div>
       </section>
     </div>
@@ -612,7 +586,7 @@
   <footer class="wrap">
     <a class="logo" href="#top">Elolyte</a>
     <a href="mailto:hello@elolyte.com">hello@elolyte.com</a>
-    <p class="fineprint">Tallinn, Estonia. Food supplement. Not medical advice. If you are pregnant, breastfeeding, on medication, or have a medical condition, ask a doctor before using a food supplement. Keep out of reach of children. © Elolyte</p>
+    <p class="fineprint">Food supplement. Not medical advice. If you are pregnant, breastfeeding, on medication, or have a medical condition, ask a doctor before using a food supplement. Keep out of reach of children. © Elolyte</p>
   </footer>
 
   <script>
