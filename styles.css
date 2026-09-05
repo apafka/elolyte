@@ -72,6 +72,10 @@ a { color: inherit; }
   color: var(--olive);
 }
 
+.nav .logo {
+  letter-spacing: 0.14em;
+}
+
 .nav-link {
   text-decoration: none;
   font-size: 0.95rem;
@@ -340,7 +344,6 @@ footer a:hover { color: var(--ink); }
   .features { gap: 0.95rem 1.2rem; }
   .shop { padding: 2rem 0 3.2rem; }
   .nav-actions { gap: 0.7rem; }
-  .nav-link { font-size: 0.88rem; }
   .nav-buy { padding: 0.62rem 0.95rem; }
 }
 
