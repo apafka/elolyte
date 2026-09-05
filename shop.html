@@ -21,11 +21,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script>
-  /* Stripe Payment Links — public URLs only. No secret keys. */
-  const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/00w5kD0QQ8vf5tu78K6kg01";
-  const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/00w9ATeHGcLve000Km6kg00";
-</script>
 </head>
 <body>
   <header class="nav">
@@ -76,30 +71,6 @@
     <a href="mailto:hello@elolyte.com">hello@elolyte.com</a>
     <p class="fineprint">Food supplement. Not medical advice. If you are pregnant, breastfeeding, on medication, or have a medical condition, ask a doctor before using a food supplement. Keep out of reach of children. © Elolyte</p>
   </footer>
-
-  <script>
-    (function () {
-      const links = {
-        "one-time": STRIPE_PAYMENT_LINK_ONE_TIME,
-        subscription: STRIPE_PAYMENT_LINK_SUBSCRIPTION
-      };
-      function isLive(url) {
-        return url && !/placeholder|REPLACE/i.test(url);
-      }
-      document.querySelectorAll("[data-buy]").forEach(function (el) {
-        const url = links[el.getAttribute("data-buy")];
-        el.setAttribute("rel", "noopener noreferrer");
-        if (isLive(url)) {
-          el.setAttribute("href", url);
-        } else {
-          el.setAttribute("href", "#buy");
-          el.addEventListener("click", function (e) {
-            e.preventDefault();
-            alert("Checkout is not live yet. Paste Stripe Payment Links into STRIPE_PAYMENT_LINK_ONE_TIME and STRIPE_PAYMENT_LINK_SUBSCRIPTION in shop.html. Meanwhile: hello@elolyte.com");
-          });
-        }
-      });
-    })();
-  </script>
+  <script src="buy.js"></script>
 </body>
 </html>

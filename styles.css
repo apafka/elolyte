@@ -201,12 +201,18 @@ a { color: inherit; }
   padding: 3.4rem 0 4.5rem;
 }
 
+.home-offers {
+  padding-top: 1.2rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+}
+
 .shop-intro {
   max-width: 40rem;
   margin-bottom: 2.4rem;
 }
 
-.shop-intro h1 {
+.shop-intro h1,
+.shop-intro h2 {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 800;
   letter-spacing: -0.04em;
