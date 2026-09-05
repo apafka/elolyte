@@ -12,16 +12,9 @@ const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/00w9ATeHGcLve00
   }
   document.querySelectorAll("[data-buy]").forEach(function (el) {
     const url = links[el.getAttribute("data-buy")];
-    const flavor = (el.getAttribute("data-flavor") || "").trim();
     el.setAttribute("rel", "noopener noreferrer");
     if (isLive(url)) {
-      if (flavor) {
-        const tagged = new URL(url);
-        tagged.searchParams.set("client_reference_id", flavor.slice(0, 200));
-        el.setAttribute("href", tagged.toString());
-      } else {
-        el.setAttribute("href", url);
-      }
+      el.setAttribute("href", url);
     } else {
       el.setAttribute("href", "#buy");
       el.addEventListener("click", function (e) {
