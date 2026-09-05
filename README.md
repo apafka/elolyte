@@ -3,23 +3,36 @@
 GitHub Pages source for **[https://elolyte.com](https://elolyte.com)** (`CNAME` → `elolyte.com`).  
 Public repo: [apafka/elolyte](https://github.com/apafka/elolyte). Pages builds from `main` (`/`).
 
-Buy page for a magnesium-first electrolyte powder in sachets, packed in Tallinn, Estonia.
-
-Page shape (steal the *habit* from daily-nutrition brands, not the gummy): subscription-first ($39 / month is the primary CTA; $45 is “try once”), a Taste-clean / No junk / Daily stack, rip-open desk ritual, and risk reversal next to checkout. Still one product: **30 sachets**.
+Validation landing page: **The Clean Electrolyte** + **Water isn’t enough** + dose clarity. One product, one primary CTA.
 
 ## Product (locked)
 
 | | |
 |---|---|
-| Brand | Elolyte |
+| Brand | ELOLYTE |
 | One-time | **$45 USD** list price for one pack |
 | Subscribe & save | **$39 USD / month** list price for the same pack |
 | Pack | **30 sachets / 30 drinks** |
-| Formula | Magnesium-first electrolytes, zero / near-zero sugar, clean label. One formula (lemon/lime or unflavored — do not invent lab claims). |
+| Dose | **1,000 mg sodium · 200 mg potassium · 60 mg magnesium** |
+| Sugar | 0g. No artificial crap. |
 | Shipping | First pack ships from Estonia when ready (target **4–6 weeks** of order). Not next-day. |
 | Subscription renewals | Only after stock is flowing. Not endless in-stock inventory. |
 | Refund | **Full refund if we cannot ship** the first pack. |
 | Contact | [hello@elolyte.com](mailto:hello@elolyte.com) |
+
+## Page shape
+
+Single page, ~7 sections. Minimal nav (logo + Buy). Subscribe-first checkout.
+
+1. Hero — *Water isn’t enough.* Dose line. Try Elolyte →
+2. Problem — Your body doesn’t just need water. Huge 1,000 / 200 / 60
+3. Nothing unnecessary — 0g sugar · no junk · Mix. Drink. Go.
+4. How to — Tear · Pour · Shake · Drink
+5. Real life — Work / Train / Travel / Everyday
+6. Trust — honest terms only (no fake reviews)
+7. Buy — Subscribe $39/mo primary · Try once $45
+
+Final band: *Drink more than water. ELOLYTE.*
 
 ## Stripe Payment Links (required before anyone can pay)
 
@@ -62,9 +75,9 @@ Push both pasted URLs to `main`. GitHub Pages will pick them up.
 - No fake waitlist counts, testimonials, star ratings, or “1M members” social proof.
 - No “in stock / ships tomorrow.”
 - Subscription: first pack ships when ready; renewals only after stock is flowing.
-- No disease claims. Soft copy only (“clean electrolytes for daily work”). EU food-supplement caution stays on the page.
-- Do not invent “12 electrolytes” or milligrams until the supplier formula is locked.
-- Not a gummy brand. Sachets, desk ritual, premium forest/cream/gold — warmer voice, not cartoonish.
+- No disease claims. Soft copy only. EU food-supplement caution stays on the page.
+- No About, Blog, or extra pages. This is a buy page, not a brand magazine.
+- Not a gummy brand. Sachets. Premium cream / forest / citrus.
 
 ## Edit & deploy
 
