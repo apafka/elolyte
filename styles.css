@@ -229,57 +229,68 @@ a { color: inherit; }
 .flavor-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15rem;
+  gap: 1.6rem 1.2rem;
+  align-items: stretch;
 }
 
 .flavor-card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 1.4rem;
-  overflow: hidden;
+  border-radius: 1.15rem;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow);
+  min-height: 100%;
+}
+
+.flavor-media {
+  aspect-ratio: 1 / 1;
+  background: var(--cream-hot);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
 }
 
 .flavor-photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: var(--sage-wash);
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
 }
 
 .flavor-body {
-  padding: 1.15rem 1.2rem 1.25rem;
+  padding: 1.15rem 1.2rem 1.3rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .flavor-body h3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.15;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
 }
 
-.flavor-body p {
-  color: var(--muted);
+.flavor-price {
+  color: var(--olive);
   font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.05rem;
 }
 
 .flavor-actions {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.5rem;
   margin-top: auto;
 }
 
 .flavor-actions .btn {
   width: 100%;
-  padding: 0.85rem 1rem;
+  padding: 0.82rem 1rem;
 }
 
 .contact-line {
@@ -317,7 +328,7 @@ a { color: inherit; }
 .flavor-chip {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
   text-decoration: none;
   color: var(--olive);
   font-size: 0.82rem;
@@ -325,13 +336,22 @@ a { color: inherit; }
   letter-spacing: -0.02em;
 }
 
+.flavor-chip .flavor-price {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 .flavor-chip img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.45rem;
   border-radius: 0.85rem;
   border: 1px solid var(--line);
-  background: var(--sage-wash);
+  background: var(--cream-hot);
 }
 
 .flavor-chip:hover { color: var(--ink); }
@@ -433,6 +453,21 @@ footer {
   flex-wrap: wrap;
   align-items: baseline;
   border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 1.05rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
 }
 
 footer a { color: var(--olive); text-underline-offset: 3px; }

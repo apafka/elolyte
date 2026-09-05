@@ -25,6 +25,7 @@ Two-page static site: a hero landing with six flavor cards plus Subscribe / Try 
 | Sugar | No sugar |
 | Flavors | Natural Lemon, Original, Natural Lime, Natural Watermelon, Natural Cola, Tropical |
 | Contact | [hello@elolyte.com](mailto:hello@elolyte.com) |
+| Social | [X @drink_elolyte](https://x.com/drink_elolyte) · [Instagram @drink_elolyte](https://www.instagram.com/drink_elolyte/) |
 
 ## Stripe Payment Links
 
