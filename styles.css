@@ -58,6 +58,12 @@ a { color: inherit; }
   gap: 1.25rem;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.15rem;
+}
+
 .logo {
   font-size: 1.35rem;
   font-weight: 700;
@@ -97,6 +103,11 @@ a { color: inherit; }
 
 .btn:hover { background: var(--orange-hot); border-color: var(--orange-hot); }
 .btn:active { transform: translateY(1px); }
+
+.nav-buy {
+  padding: 0.7rem 1.15rem;
+  box-shadow: 0 8px 18px rgba(194, 78, 20, 0.18);
+}
 
 .btn-ghost {
   background: transparent;
@@ -328,6 +339,9 @@ footer a:hover { color: var(--ink); }
   .hero-photo { max-height: min(58svh, 460px); margin-inline: auto; }
   .features { gap: 0.95rem 1.2rem; }
   .shop { padding: 2rem 0 3.2rem; }
+  .nav-actions { gap: 0.7rem; }
+  .nav-link { font-size: 0.88rem; }
+  .nav-buy { padding: 0.62rem 0.95rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
