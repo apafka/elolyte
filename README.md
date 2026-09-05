@@ -20,7 +20,7 @@ Two-page static site: a hero landing (with Subscribe / Try once cards) plus a Sh
 | One-time | **$45 USD** list price for one pack |
 | Subscribe | **$39 USD / month** list price for the same pack |
 | Pack | **30 sachets / 30 drinks** |
-| Value | **$1.3 USD per drink**, costs less than your average bottle of water |
+| Value | Subscribe **$1.3 USD per drink** ($39÷30). Try once **$1.5 USD per drink** ($45÷30). |
 | Dose | **1,000 mg sodium · 200 mg potassium · 60 mg magnesium** |
 | Sugar | No sugar |
 | Contact | [hello@elolyte.com](mailto:hello@elolyte.com) |
