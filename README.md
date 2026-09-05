@@ -3,7 +3,7 @@
 GitHub Pages source for **[https://elolyte.com](https://elolyte.com)** (`CNAME` → `elolyte.com`).  
 Public repo: [apafka/elolyte](https://github.com/apafka/elolyte). Pages builds from `main` (`/`).
 
-Two-page static site: a hero landing plus a Shop Sachets offer page.
+Two-page static site: a hero landing (with Subscribe / Try once cards) plus a Shop Sachets offer page.
 
 ## Pages
 
@@ -27,7 +27,7 @@ Two-page static site: a hero landing plus a Shop Sachets offer page.
 
 ## Stripe Payment Links
 
-Buy buttons on `shop.html` read two constants:
+Buy buttons on `index.html` and `shop.html` read two constants in `buy.js`:
 
 ```js
 const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/00w5kD0QQ8vf5tu78K6kg01";            // $45 one-time — live
@@ -36,7 +36,7 @@ const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/00w9ATeHGcLve00
 
 Do **not** put Stripe secret keys on this site. Payment Links are public URLs.
 
-Until a URL is a real `buy.stripe.com` link (not a `placeholder` / `REPLACE` string), that button shows a short message and points people to `hello@elolyte.com`.
+Until a URL is a real `buy.stripe.com` link (not a `placeholder` / `REPLACE` string), that button shows a short message and points people to `hello@elolyte.com`. Paste updated links in `buy.js`. Paste updated links in `buy.js`.
 
 ## Honesty rules (keep these)
 
@@ -46,11 +46,11 @@ Until a URL is a real `buy.stripe.com` link (not a `placeholder` / `REPLACE` str
 - No “in stock / ships tomorrow.”
 - No disease claims, USDA Organic claims, or “mental clarity” claims in HTML/copy. Sachet art in the hero photo may show label pixels; do not repeat those as marketing claims.
 - Food-supplement caution stays in the footer.
-- Home stays mostly hero + feature row. Shop stays a clean pricing page.
+- Home is hero + feature/trust row + the same Subscribe / Try once cards as shop. Shop stays a clean pricing page.
 
 ## Edit & deploy
 
-This is a static site: `index.html` + `shop.html` + `styles.css` + `CNAME`. Merge to `main` and GitHub Pages updates https://elolyte.com.
+This is a static site: `index.html` + `shop.html` + `styles.css` + `buy.js` + `CNAME`. Merge to `main` and GitHub Pages updates https://elolyte.com.
 
 ```bash
 python3 -m http.server 8080
