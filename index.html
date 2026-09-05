@@ -3,615 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELOLYTE — Water isn’t enough.</title>
-<meta name="description" content="Daily electrolytes for better hydration. 1,000 mg sodium · 200 mg potassium · 60 mg magnesium. No sugar. No bullshit. 30 sachets. Subscribe $39/mo or try once $45.">
+<title>Elolyte — Hydrate smarter. No sugar. No BS.</title>
+<meta name="description" content="Electrolyte hydration that moves with you. Science-backed. Natural lemon. Subscribe $39/mo or try once $45.">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#F7F3EA">
+<meta name="theme-color" content="#d8e3d3">
 <link rel="canonical" href="https://elolyte.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="ELOLYTE — Water isn’t enough.">
-<meta property="og:description" content="Daily electrolytes for better hydration. 1,000 mg sodium · 200 mg potassium · 60 mg magnesium. No sugar. No bullshit.">
+<meta property="og:title" content="Elolyte — Hydrate smarter. No sugar. No BS.">
+<meta property="og:description" content="Electrolyte hydration that moves with you. Science-backed. Natural lemon.">
 <meta property="og:url" content="https://elolyte.com/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://elolyte.com/assets/product-hero.jpg">
-<meta property="og:image:alt" content="Elolyte citrus salt electrolyte sachet beside a glass of lemon water">
+<meta property="og:image" content="https://elolyte.com/assets/hydrate-hero.jpeg">
+<meta property="og:image:alt" content="Elolyte hydrate sachet beside a glass of iced lemon water">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://elolyte.com/assets/product-hero.jpg">
+<meta name="twitter:image" content="https://elolyte.com/assets/hydrate-hero.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script>
-  /* Stripe Payment Links — public URLs only. No secret keys. */
-  const STRIPE_PAYMENT_LINK_ONE_TIME = "https://buy.stripe.com/00w5kD0QQ8vf5tu78K6kg01";
-  const STRIPE_PAYMENT_LINK_SUBSCRIPTION = "https://buy.stripe.com/00w9ATeHGcLve000Km6kg00";
-</script>
-<style>
-  :root {
-    --cream: #F7F3EA;
-    --paper: #EFE8DA;
-    --card: #FFFDF8;
-    --ink: #161411;
-    --muted: #6A645B;
-    --forest: #1E3329;
-    --forest-mid: #2A4538;
-    --gold: #C4923A;
-    --citrus: #E6B13A;
-    --line: #D9D0C0;
-    --ivory: #F7F3EA;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: Inter, "Helvetica Neue", system-ui, sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  img { display: block; max-width: 100%; }
-  a { color: inherit; }
-  :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
-  .wrap { width: min(1120px, calc(100% - 3.25rem)); margin-inline: auto; }
-  .display {
-    font-family: Fraunces, "Times New Roman", serif;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    line-height: 0.98;
-  }
-  .eyebrow {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-  }
-  .muted { color: var(--muted); }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.55rem;
-    background: var(--forest);
-    color: var(--cream);
-    text-decoration: none;
-    border: 1px solid var(--forest);
-    border-radius: 999px;
-    padding: 1rem 1.55rem;
-    font: 700 0.78rem/1 Inter, system-ui, sans-serif;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  }
-  .btn:hover { background: var(--forest-mid); border-color: var(--forest-mid); }
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink);
-    border-color: var(--ink);
-  }
-  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
-  .btn-cream {
-    background: var(--cream);
-    color: var(--forest);
-    border-color: var(--cream);
-  }
-  .btn-cream:hover { background: #fff; border-color: #fff; }
-  .link-quiet {
-    color: var(--muted);
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-underline-offset: 3px;
-  }
-  .link-quiet:hover { color: var(--ink); }
-
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: var(--cream);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 68px;
-  }
-  .logo {
-    font-family: Inter, system-ui, sans-serif;
-    font-size: 0.92rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  .nav-buy { padding: 0.68rem 1.15rem; }
-
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4.25rem;
-    align-items: center;
-    min-height: calc(100svh - 68px);
-    padding: 3.5rem 0 4.5rem;
-  }
-  .hero h1 {
-    font-size: clamp(3.4rem, 8vw, 6.1rem);
-    max-width: 9ch;
-    margin: 0.15rem 0 1.15rem;
-  }
-  .hero-sub {
-    font-size: 1.2rem;
-    max-width: 28ch;
-    margin-bottom: 1.35rem;
-  }
-  .dose-line {
-    font-size: 0.92rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    color: var(--ink);
-    margin-bottom: 0.55rem;
-  }
-  .no-bs {
-    font-family: Fraunces, Georgia, serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: var(--forest);
-    margin-bottom: 1.7rem;
-  }
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.95rem 1.25rem;
-  }
-  .hero-note {
-    margin-top: 1.15rem;
-    font-size: 0.88rem;
-    color: var(--muted);
-  }
-  .still {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    min-height: 560px;
-    height: min(74svh, 740px);
-    overflow: hidden;
-  }
-  .hero-photo {
-    width: 100%;
-    height: 100%;
-    min-height: 560px;
-    object-fit: cover;
-    object-position: 58% 46%;
-    max-width: none;
-  }
-
-  section { padding: 5.4rem 0; }
-  .section-head { max-width: 38rem; margin-bottom: 2.6rem; }
-  .section-head h2 {
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    margin: 0.55rem 0 0.9rem;
-  }
-
-  .problem { background: var(--forest); color: var(--cream); }
-  .problem .section-head { margin-bottom: 2.1rem; }
-  .problem .muted { color: #C9D3CB; }
-  .problem p.lead { max-width: 42ch; color: #D5DDD6; font-size: 1.12rem; }
-  .doses {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: color-mix(in srgb, #fff 12%, transparent);
-    border: 1px solid color-mix(in srgb, #fff 14%, transparent);
-    margin-top: 2.6rem;
-  }
-  .dose {
-    background: var(--forest);
-    padding: 1.8rem 1.4rem 1.6rem;
-  }
-  .dose b {
-    display: block;
-    font-family: Inter, system-ui, sans-serif;
-    font-weight: 800;
-    font-size: clamp(2.6rem, 6vw, 4.4rem);
-    letter-spacing: -0.045em;
-    line-height: 0.9;
-  }
-  .dose span {
-    display: block;
-    margin-top: 0.7rem;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--citrus);
-  }
-
-  .clean-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid var(--line);
-    background: var(--card);
-  }
-  .clean-item {
-    padding: 1.7rem 1.4rem;
-    border-right: 1px solid var(--line);
-  }
-  .clean-item:last-child { border-right: 0; }
-  .clean-item strong {
-    display: block;
-    font-size: 1.02rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-  }
-  .clean-item p { color: var(--muted); font-size: 0.94rem; }
-  .mantra {
-    margin-top: 2rem;
-    font-family: Fraunces, Georgia, serif;
-    font-size: clamp(2rem, 4.4vw, 3.2rem);
-    font-weight: 500;
-    letter-spacing: -0.03em;
-  }
-  .mantra em { font-style: italic; font-weight: 400; color: var(--forest); }
-
-  .howto { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-  }
-  .step {
-    background: var(--card);
-    padding: 1.8rem 1.35rem 1.6rem;
-  }
-  .step-n {
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    color: var(--gold);
-    margin-bottom: 0.7rem;
-  }
-  .step h3 {
-    font-family: Fraunces, Georgia, serif;
-    font-size: 1.85rem;
-    font-weight: 500;
-  }
-  .howto .cta-row { margin-top: 2rem; }
-
-  .life-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.1rem;
-  }
-  .life {
-    border-top: 2px solid var(--ink);
-    padding-top: 1.05rem;
-  }
-  .life h3 {
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-  }
-  .life p { color: var(--muted); margin-top: 0.55rem; font-size: 0.98rem; }
-
-  .value-bar {
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    background: var(--paper);
-    padding: 1.15rem 0;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-  }
-
-  .buy-band { background: var(--cream); }
-  .offers {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 1.15rem;
-  }
-  .offer {
-    background: var(--card);
-    border: 1px solid var(--line);
-    padding: 2.1rem 1.9rem 1.85rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .offer-featured {
-    background: var(--forest);
-    color: var(--cream);
-    border-color: var(--forest);
-  }
-  .offer-tag {
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--gold);
-    margin-bottom: 0.85rem;
-  }
-  .offer-featured .offer-tag { color: var(--citrus); }
-  .price {
-    font-family: Inter, system-ui, sans-serif;
-    font-weight: 800;
-    font-size: clamp(3.2rem, 6vw, 4.6rem);
-    letter-spacing: -0.045em;
-    line-height: 0.88;
-    margin: 0.15rem 0 0.35rem;
-  }
-  .price span {
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0;
-    color: var(--muted);
-  }
-  .offer-featured .price span { color: #C9D3CB; }
-  .offer ul {
-    list-style: none;
-    display: grid;
-    gap: 0.55rem;
-    margin: 1.25rem 0 1.6rem;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-  .offer-featured ul { color: #D5DDD6; }
-  .offer .btn { width: 100%; margin-top: auto; }
-
-  .finale {
-    background: var(--forest);
-    color: var(--cream);
-    padding: 5.2rem 0;
-    text-align: center;
-  }
-  .finale h2 {
-    font-size: clamp(2.6rem, 6vw, 4.6rem);
-    max-width: 12ch;
-    margin: 0 auto 0.7rem;
-  }
-  .finale .brand {
-    font-family: Inter, system-ui, sans-serif;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    font-size: 0.9rem;
-    margin-bottom: 1.7rem;
-  }
-  .finale .btn { min-width: 14rem; }
-
-  footer {
-    padding: 2.2rem 0 2.8rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    align-items: baseline;
-  }
-  footer a { color: var(--muted); text-underline-offset: 3px; }
-  footer a:hover { color: var(--ink); }
-  .fineprint {
-    width: 100%;
-    font-size: 0.74rem;
-    color: #8A8378;
-    max-width: 72ch;
-  }
-
-  @media (max-width: 900px) {
-    .wrap { width: min(1120px, calc(100% - 1.7rem)); }
-    .hero, .doses, .clean-grid, .steps, .life-grid, .offers { grid-template-columns: 1fr; }
-    .hero { gap: 1.5rem; padding: 1.5rem 0 2.4rem; min-height: unset; }
-    .still { min-height: 360px; height: min(54svh, 460px); }
-    .hero-photo { min-height: 360px; }
-    .clean-item { border-right: 0; border-bottom: 1px solid var(--line); }
-    .clean-item:last-child { border-bottom: 0; }
-    section { padding: 3.6rem 0; }
-    .finale { padding: 3.6rem 0; }
-    .dose { padding: 1.4rem 1.2rem; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .btn { transition: none; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="logo" href="#top">Elolyte</a>
-      <a class="btn nav-buy" href="#buy">Buy</a>
+      <a class="logo" href="/">Elolyte</a>
+      <a class="nav-link" href="shop.html">Shop Sachets</a>
     </div>
   </header>
 
   <main id="top">
-    <div class="wrap hero">
+    <section class="wrap hero">
       <div>
-        <p class="eyebrow">Elolyte</p>
-        <h1 class="display">Water isn’t enough.</h1>
-        <p class="hero-sub">Daily electrolytes for better hydration.</p>
-        <p class="dose-line">1,000 mg sodium · 200 mg potassium · 60 mg magnesium</p>
-        <p class="no-bs">No sugar. No bullshit.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#subscribe">Try Elolyte →</a>
-          <a class="link-quiet" href="#try-once">Try once $45</a>
-        </div>
-        <p class="hero-note">Subscribe $39/mo</p>
+        <h1>Hydrate smarter. No sugar. No BS.</h1>
+        <p class="hero-sub">Electrolyte hydration that moves with you • Science-backed • Natural lemon</p>
+        <a class="btn" href="shop.html">Shop sachets →</a>
+        <ul class="features" aria-label="Product highlights">
+          <li class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M5 13c2.5-6 7-9 7-9s4.5 3 7 9c1.2 2.8-1.2 6-4.6 6H9.6C6.2 19 3.8 15.8 5 13Z"/>
+              <path d="M12 8.5c.2 3.2-1.6 5.6-3.8 7"/>
+            </svg>
+            Clean Ingredients
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M8 10h8l-1.2 8.2a2 2 0 0 1-2 1.8h-1.6a2 2 0 0 1-2-1.8L8 10Z"/>
+              <path d="M9 10V8a3 3 0 0 1 6 0v2"/>
+              <path d="M5 5l14 14"/>
+            </svg>
+            No Sugar
+          </li>
+          <li class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M7 8.5c0-2.4 2.2-4.5 5-4.5s5 2.1 5 4.5v9.2a1.8 1.8 0 0 1-1.8 1.8H8.8A1.8 1.8 0 0 1 7 17.7V8.5Z"/>
+              <path d="M7 11h10"/>
+            </svg>
+            Portable
+          </li>
+        </ul>
+        <ul class="trust" aria-label="Order guarantees">
+          <li class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M3 7h11v8H3z"/>
+              <path d="M14 10h4l3 3v2h-7"/>
+              <circle cx="6.5" cy="17.5" r="1.5"/>
+              <circle cx="17.5" cy="17.5" r="1.5"/>
+            </svg>
+            Free shipping on orders over $49
+          </li>
+          <li class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 3 5 6v6c0 5 3.2 7.6 7 9 3.8-1.4 7-4 7-9V6l-7-3Z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            60-day Money Back Guarantee
+          </li>
+        </ul>
       </div>
-      <aside class="still">
+      <aside class="hero-visual">
         <img
           class="hero-photo"
-          src="assets/product-hero.jpg"
+          src="assets/hydrate-hero.jpeg"
           width="1024"
           height="1536"
-          alt="Elolyte citrus salt electrolyte sachet standing beside a glass of lemon water">
+          alt="Elolyte hydrate sachet leaning against a glass of iced lemon water">
       </aside>
-    </div>
-
-    <div class="value-bar">
-      <div class="wrap">$1.3 USD per drink, costs less than your average bottle of water</div>
-    </div>
-
-    <section class="problem" id="formula">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">The three that matter</p>
-          <h2 class="display">Your body doesn’t just need water.</h2>
-          <p class="lead">When you sweat, exercise, travel or simply go through a long day, you lose electrolytes. ELOLYTE replaces the three that matter most.</p>
-        </div>
-        <div class="doses" aria-label="Electrolyte doses">
-          <div class="dose"><b>1,000</b><span>mg sodium</span></div>
-          <div class="dose"><b>200</b><span>mg potassium</span></div>
-          <div class="dose"><b>60</b><span>mg magnesium</span></div>
-        </div>
-      </div>
     </section>
-
-    <section id="clean">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Nothing unnecessary</p>
-          <h2 class="display">Only what you mix in.</h2>
-        </div>
-        <div class="clean-grid">
-          <article class="clean-item">
-            <strong>0g sugar</strong>
-            <p>Not a sports-drink candy hit.</p>
-          </article>
-          <article class="clean-item">
-            <strong>No artificial crap</strong>
-            <p>No neon dyes. No junk pile.</p>
-          </article>
-          <article class="clean-item">
-            <strong>Electrolytes that actually matter</strong>
-            <p>Sodium, potassium, magnesium.</p>
-          </article>
-          <article class="clean-item">
-            <strong>Easy to carry</strong>
-            <p>One sachet. One bottle.</p>
-          </article>
-        </div>
-        <p class="mantra">Mix. Drink. <em>Go.</em></p>
-      </div>
-    </section>
-
-    <section class="howto" id="how">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">How to</p>
-          <h2 class="display">One sachet. One bottle. Done.</h2>
-        </div>
-        <div class="steps">
-          <article class="step"><p class="step-n">01</p><h3>Tear</h3></article>
-          <article class="step"><p class="step-n">02</p><h3>Pour</h3></article>
-          <article class="step"><p class="step-n">03</p><h3>Shake</h3></article>
-          <article class="step"><p class="step-n">04</p><h3>Drink</h3></article>
-        </div>
-        <div class="cta-row">
-          <a class="btn" href="#subscribe">Try Elolyte →</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="life">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Real life</p>
-          <h2 class="display">Made for real life.</h2>
-        </div>
-        <div class="life-grid">
-          <article class="life">
-            <h3>Work</h3>
-            <p>Long desk days. Stay in the mix.</p>
-          </article>
-          <article class="life">
-            <h3>Train</h3>
-            <p>Sweat it out. Put it back.</p>
-          </article>
-          <article class="life">
-            <h3>Travel</h3>
-            <p>Planes, heat, late nights.</p>
-          </article>
-          <article class="life">
-            <h3>Everyday</h3>
-            <p>Just water isn’t the whole job.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="buy-band" id="buy">
-      <section>
-        <div class="wrap">
-          <div class="section-head">
-            <p class="eyebrow">Elolyte · 30 sachets</p>
-            <h2 class="display">Start with a month.</h2>
-            <p class="muted">Same pack either way. Subscribe is the plan. Try once if you want a single box first.</p>
-          </div>
-          <div class="offers">
-            <article class="offer offer-featured" id="subscribe">
-              <p class="offer-tag">Subscribe</p>
-              <p class="price">$39 <span>/ mo</span></p>
-              <ul>
-                <li>30 sachets every month</li>
-                <li>$1.3 USD per drink</li>
-                <li>Same formula: 1,000 / 200 / 60</li>
-                <li>Cancel anytime in Stripe</li>
-              </ul>
-              <a class="btn btn-cream" data-buy="subscription" href="#buy">Subscribe — $39 / mo</a>
-            </article>
-            <article class="offer" id="try-once">
-              <p class="offer-tag">Try once</p>
-              <p class="price">$45</p>
-              <ul>
-                <li>One pack, paid once</li>
-                <li>30 sachets · 30 drinks</li>
-                <li>$1.3 USD per drink</li>
-              </ul>
-              <a class="btn btn-ghost" data-buy="one-time" href="#buy">Try once — $45</a>
-            </article>
-          </div>
-        </div>
-      </section>
-    </div>
   </main>
 
-  <aside class="finale">
-    <div class="wrap">
-      <h2 class="display">Drink more than water.</h2>
-      <p class="brand">Elolyte</p>
-      <a class="btn btn-cream" href="#subscribe">Try Elolyte →</a>
-    </div>
-  </aside>
-
   <footer class="wrap">
-    <a class="logo" href="#top">Elolyte</a>
+    <a class="logo" href="/">Elolyte</a>
     <a href="mailto:hello@elolyte.com">hello@elolyte.com</a>
     <p class="fineprint">Food supplement. Not medical advice. If you are pregnant, breastfeeding, on medication, or have a medical condition, ask a doctor before using a food supplement. Keep out of reach of children. © Elolyte</p>
   </footer>
-
-  <script>
-    (function () {
-      const links = {
-        "one-time": STRIPE_PAYMENT_LINK_ONE_TIME,
-        subscription: STRIPE_PAYMENT_LINK_SUBSCRIPTION
-      };
-      function isLive(url) {
-        return url && !/placeholder|REPLACE/i.test(url);
-      }
-      document.querySelectorAll("[data-buy]").forEach(function (el) {
-        const url = links[el.getAttribute("data-buy")];
-        el.setAttribute("rel", "noopener noreferrer");
-        if (isLive(url)) {
-          el.setAttribute("href", url);
-        } else {
-          el.setAttribute("href", "#buy");
-          el.addEventListener("click", function (e) {
-            e.preventDefault();
-            alert("Checkout is not live yet. Paste Stripe Payment Links into STRIPE_PAYMENT_LINK_ONE_TIME and STRIPE_PAYMENT_LINK_SUBSCRIPTION in index.html. Meanwhile: hello@elolyte.com");
-          });
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
